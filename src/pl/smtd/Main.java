@@ -1,8 +1,11 @@
 package pl.smtd;
 
+import pl.smtd.recursion.RecursionExamples;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        RecursionExamples recursion = new RecursionExamples();
+        recursion.select();
     }
 }

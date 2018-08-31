@@ -7,48 +7,44 @@ public class ConsoleMenu {
     private static String SEPARATOR_LITE = "-";
     private static String FRAME = "|";
 
-    private Map<Integer, String> items = new HashMap<>();
+    private Map<Integer, ConsoleExercise> items;
     private Scanner input = new Scanner(System.in);
     private String title;
     private int width;
 
-    public ConsoleMenu(String title, int width, List<String> items) {
+    public ConsoleMenu(String title, int width, Map<Integer, ConsoleExercise> items) {
         this.title = title;
         this.width = width;
-        this.items.put(0, "quit");
-        for (int i = 0; i < items.size(); i++) {
-            this.items.put(i + 1, items.get(i));
-        }
+        this.items = items;
     }
 
-    public String show() {
-        String selectedMethod = "";
-        while (selectedMethod.isEmpty()) {
+    public void show() {
+        while (true) {
             System.out.println(separator(SEPARATOR_BOLD));
             System.out.println(title());
             System.out.println(separator(SEPARATOR_BOLD));
 
-            for (int i = 1; i < items.size(); i++) {
-                System.out.println(menuLine(i + ") " + items.get(i)));
+            for (int i = 0; i < items.size(); i++) {
+                System.out.println(menuLine( i + 1 + ") " + items.get(i).getName()));
             }
             System.out.println(separator(SEPARATOR_LITE));
             System.out.println(menuLine("0) quit"));
             System.out.println(separator(SEPARATOR_BOLD));
 
-            System.out.print("SELECT: ");
+            System.out.print(FRAME + " SELECT: ");
             if (input.hasNextInt()) {
-                int userChoice = input.nextInt();
-                if (userChoice >= 0 && userChoice < items.size()) {
-                    selectedMethod = items.get(userChoice);
+                int userChoice = input.nextInt() - 1;
+                if (userChoice == -1) {
+                    break;
+                } else if (userChoice >= 0 && userChoice < items.size()) {
+                    System.out.println("\n" + items.get(userChoice).getName().toUpperCase());
+                    items.get(userChoice).execute();
+                    System.out.println(" ");
+                } else {
+                    printError("Bad input... Please try again.");
                 }
             }
-
-            if (selectedMethod.isEmpty()) {
-                System.out.println("Bad input! Please try again.");
-                System.out.println(" ");
-            }
         }
-        return selectedMethod;
     }
 
     private String separator(String str) {
@@ -74,5 +70,21 @@ public class ConsoleMenu {
                 .indent(2)
                 .frame(FRAME)
                 .print();
+    }
+
+    private String error(String text) {
+        return new ConsoleText(text, width)
+                .trim()
+                .align(ConsoleText.LEFT)
+                .indent(2)
+                .frame("!")
+                .print();
+    }
+
+    private void printError(String text) {
+        System.out.println(" ");
+        System.out.println(error("ERROR:"));
+        System.out.println(error(text));
+        System.out.println(" ");
     }
 }

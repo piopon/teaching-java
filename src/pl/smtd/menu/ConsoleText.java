@@ -19,33 +19,39 @@ public class ConsoleText {
     }
 
     public ConsoleText trim() {
-        this.text = this.text.trim();
+        text = text.trim();
         return this;
     }
 
     public ConsoleText repeat(int times) {
-        this.text = repeat(this.text, times);
+        text = repeat(text, times);
         return this;
     }
 
     public ConsoleText align(int alignment) {
         int freespace = width - text.length();
         if (alignment == LEFT) {
-            this.text = this.text + repeat(" ", freespace);
+            text = text + repeat(" ", freespace);
         } else if (alignment == RIGHT) {
-            this.text = repeat(" ", freespace) + this.text;
+            text = repeat(" ", freespace) + text;
         } else if (alignment == CENTER) {
             int afterSpace = (freespace % 2 == 0) ? freespace / 2 : freespace / 2 + 1;
-            this.text = repeat(" ", freespace / 2) + this.text + repeat(" ", afterSpace);
+            text = repeat(" ", freespace / 2) + text + repeat(" ", afterSpace);
         }
         return this;
     }
 
     public ConsoleText frame(String frameStr) {
-        StringBuilder sb = new StringBuilder("  " + text.substring(0, width - 2));
-        sb.replace(0, 2, frameStr + " ");
-        sb.replace(text.length() - 2, text.length(), " " + frameStr);
-        this.text = sb.toString();
+        StringBuilder sb = new StringBuilder(text);
+        sb.replace(0, 1, frameStr);
+        sb.replace(text.length() - 1, text.length(), frameStr);
+        text = sb.toString();
+        return this;
+    }
+
+    public ConsoleText indent(int indentation) {
+        text = repeat(" ", indentation) + text;
+        text = text.substring(0, text.length() - indentation);
         return this;
     }
 

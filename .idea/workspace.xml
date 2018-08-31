@@ -4,6 +4,8 @@
     <list default="true" id="a6cb5a64-433d-4d3c-b92f-3beb79c0929b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/smtd/menu/ConsoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/smtd/menu/ConsoleMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/smtd/menu/ConsoleText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/smtd/menu/ConsoleText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/smtd/recursion/RecursionExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/smtd/recursion/RecursionExamples.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +29,8 @@
       <file leaf-file-name="RecursionExamples.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/smtd/recursion/RecursionExamples.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="308">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,22 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleMenu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsoleMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/smtd/menu/ConsoleMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="1540">
+              <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleText.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConsoleText.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pl/smtd/menu/ConsoleText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+            <state relative-caret-position="924">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
-                <element signature="e#1439#1440#0" expanded="true" />
                 <element signature="e#1512#1513#0" expanded="true" />
               </folding>
             </state>
@@ -81,9 +82,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/pl/smtd/Main.java" />
         <option value="$PROJECT_DIR$/src/pl/smtd/menu/TextAlign.java" />
-        <option value="$PROJECT_DIR$/src/pl/smtd/recursion/RecursionExamples.java" />
-        <option value="$PROJECT_DIR$/src/pl/smtd/menu/ConsoleMenu.java" />
         <option value="$PROJECT_DIR$/src/pl/smtd/menu/ConsoleText.java" />
+        <option value="$PROJECT_DIR$/src/pl/smtd/menu/ConsoleMenu.java" />
+        <option value="$PROJECT_DIR$/src/pl/smtd/recursion/RecursionExamples.java" />
       </list>
     </option>
   </component>
@@ -199,12 +200,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32985386" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32985386" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32985386" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799337" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25854465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -278,7 +279,6 @@
         <state relative-caret-position="704">
           <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
-            <element signature="e#1439#1440#0" expanded="true" />
             <element signature="e#1512#1513#0" expanded="true" />
           </folding>
         </state>
@@ -350,29 +350,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/smtd/recursion/RecursionExamples.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        <state relative-caret-position="308">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/smtd/menu/ConsoleText.java">
+    <entry file="file://$PROJECT_DIR$/src/pl/smtd/menu/ConsoleMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1540">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/smtd/menu/ConsoleMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/pl/smtd/menu/ConsoleText.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="924">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#1512#1513#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

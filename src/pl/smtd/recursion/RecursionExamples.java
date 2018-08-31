@@ -9,9 +9,9 @@ import java.util.List;
 public class RecursionExamples {
     public void select() {
         List<String> availableOptions = new ArrayList<>(
-                Arrays.asList("test", "test2")
+                Arrays.asList("test1", "test2", "test3")
         );
-        ConsoleMenu menu = new ConsoleMenu("Recursion example", availableOptions);
+        ConsoleMenu menu = new ConsoleMenu("Recursion example", 35, availableOptions);
         menu.show();
     }
 }

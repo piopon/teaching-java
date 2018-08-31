@@ -9,7 +9,8 @@ public class RecursionExamples {
     Map<Integer, ConsoleExercise> recursionExamples = new HashMap<>();
 
     public void select() {
-        addExamples();
+        addExamples(new RecursionTest1(),
+                    new RecursionTest2());
 
         ConsoleMenu recursionMenu = new ConsoleMenu("Recursion example", 35, recursionExamples);
         recursionMenu.show();

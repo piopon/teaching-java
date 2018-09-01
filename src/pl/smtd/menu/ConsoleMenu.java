@@ -7,12 +7,12 @@ public class ConsoleMenu {
     private static String SEPARATOR_LITE = "-";
     private static String FRAME = "|";
 
-    private Map<Integer, ConsoleExercise> items;
+    private Map<Integer, ConsoleExample> items;
     private Scanner input = new Scanner(System.in);
     private String title;
     private int width;
 
-    public ConsoleMenu(String title, int width, Map<Integer, ConsoleExercise> items) {
+    public ConsoleMenu(String title, int width, Map<Integer, ConsoleExample> items) {
         this.title = title;
         this.width = width;
         this.items = items;

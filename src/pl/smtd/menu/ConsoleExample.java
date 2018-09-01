@@ -1,6 +1,6 @@
 package pl.smtd.menu;
 
-public interface ConsoleExercise {
+public interface ConsoleExample {
 
     void execute();
 

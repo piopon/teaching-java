@@ -1,8 +1,8 @@
 package pl.smtd.recursion;
 
-import pl.smtd.menu.ConsoleExercise;
+import pl.smtd.menu.ConsoleExample;
 
-public class RecursionTest2 implements ConsoleExercise {
+public class RecursionTest2 implements ConsoleExample {
     @Override
     public void execute() {
         System.out.println("Executing recursion example 2...");

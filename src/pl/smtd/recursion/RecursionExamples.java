@@ -1,12 +1,12 @@
 package pl.smtd.recursion;
 
 import pl.smtd.menu.ConsoleMenu;
-import pl.smtd.menu.ConsoleExercise;
+import pl.smtd.menu.ConsoleExample;
 
 import java.util.*;
 
-public class RecursionExamples implements ConsoleExercise {
-    Map<Integer, ConsoleExercise> recursionExamples = new HashMap<>();
+public class RecursionExamples implements ConsoleExample {
+    Map<Integer, ConsoleExample> recursionExamples = new HashMap<>();
     private int menuWidth = 35;
 
     @Override
@@ -23,7 +23,7 @@ public class RecursionExamples implements ConsoleExercise {
         return "Recursion examples";
     }
 
-    private void addExamples(ConsoleExercise... exercises) {
+    private void addExamples(ConsoleExample... exercises) {
         for(int i = 0; i < exercises.length; i++) {
             recursionExamples.put(i, exercises[i]);
         }

@@ -5,15 +5,22 @@ import pl.smtd.menu.ConsoleExercise;
 
 import java.util.*;
 
-public class RecursionExamples {
+public class RecursionExamples implements ConsoleExercise {
     Map<Integer, ConsoleExercise> recursionExamples = new HashMap<>();
+    private int menuWidth = 35;
 
-    public void select() {
+    @Override
+    public void execute() {
         addExamples(new RecursionTest1(),
                     new RecursionTest2());
 
-        ConsoleMenu recursionMenu = new ConsoleMenu("Recursion example", 35, recursionExamples);
+        ConsoleMenu recursionMenu = new ConsoleMenu(getName(), menuWidth, recursionExamples);
         recursionMenu.show();
+    }
+
+    @Override
+    public String getName() {
+        return "Recursion examples";
     }
 
     private void addExamples(ConsoleExercise... exercises) {
@@ -21,4 +28,5 @@ public class RecursionExamples {
             recursionExamples.put(i, exercises[i]);
         }
     }
+
 }

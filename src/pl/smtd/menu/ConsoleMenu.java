@@ -27,10 +27,10 @@ public class ConsoleMenu {
             System.out.println(separator(SEPARATOR_BOLD));
 
             for (int i = 0; i < items.size(); i++) {
-                System.out.println(menuLine(i + 1 + ") " + items.get(i).getName()));
+                System.out.println(option(i + 1, items.get(i).getName()));
             }
             System.out.println(separator(SEPARATOR_LITE));
-            System.out.println(menuLine("0) Quit"));
+            System.out.println(option(0,"Quit"));
             System.out.println(separator(SEPARATOR_BOLD));
 
             System.out.print(FRAME + " SELECT: ");
@@ -66,11 +66,11 @@ public class ConsoleMenu {
                 .toUpperCase();
     }
 
-    private String menuLine(String text) {
-        return new ConsoleText(text, width)
+    private String option(int index, String text) {
+        return new ConsoleText(index + ") " + text, width)
                 .trim()
                 .align(ConsoleAlign.LEFT)
-                .indent(INDENTATION)
+                .indent(index > 9 ? INDENTATION : INDENTATION + 1)
                 .frame(FRAME)
                 .print();
     }
@@ -97,7 +97,7 @@ public class ConsoleMenu {
                 .mapToInt(item -> item.getName().length())
                 .max()
                 .orElse(DEFAULT_WIDTH);
-        int minWidth = (titleLen > maxLen) ? titleLen + 4 : maxLen + 7;
+        int minWidth = ((titleLen > maxLen) ? titleLen : maxLen) + 8;
 
         return (minWidth < initialWidth) ? initialWidth : minWidth;
     }

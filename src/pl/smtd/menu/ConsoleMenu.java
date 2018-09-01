@@ -6,6 +6,8 @@ public class ConsoleMenu {
     private static String SEPARATOR_BOLD = "=";
     private static String SEPARATOR_LITE = "-";
     private static String FRAME = "|";
+    private static int DEFAULT_WIDTH = 50;
+    private static int INDENTATION = 2;
 
     private Map<Integer, ConsoleExample> items;
     private Scanner input = new Scanner(System.in);
@@ -14,8 +16,8 @@ public class ConsoleMenu {
 
     public ConsoleMenu(String title, int width, Map<Integer, ConsoleExample> items) {
         this.title = title;
-        this.width = width;
         this.items = items;
+        this.width = adjustWidth(width);
     }
 
     public void show() {
@@ -25,7 +27,7 @@ public class ConsoleMenu {
             System.out.println(separator(SEPARATOR_BOLD));
 
             for (int i = 0; i < items.size(); i++) {
-                System.out.println(menuLine( i + 1 + ") " + items.get(i).getName()));
+                System.out.println(menuLine(i + 1 + ") " + items.get(i).getName()));
             }
             System.out.println(separator(SEPARATOR_LITE));
             System.out.println(menuLine("0) Quit"));
@@ -68,7 +70,7 @@ public class ConsoleMenu {
         return new ConsoleText(text, width)
                 .trim()
                 .align(ConsoleAlign.LEFT)
-                .indent(2)
+                .indent(INDENTATION)
                 .frame(FRAME)
                 .print();
     }
@@ -77,7 +79,7 @@ public class ConsoleMenu {
         return new ConsoleText(text, width)
                 .trim()
                 .align(ConsoleAlign.LEFT)
-                .indent(2)
+                .indent(INDENTATION)
                 .frame("!")
                 .print();
     }
@@ -87,5 +89,16 @@ public class ConsoleMenu {
         System.out.println(error("ERROR:"));
         System.out.println(error(text));
         System.out.println(" ");
+    }
+
+    private int adjustWidth(int initialWidth) {
+        int titleLen = title.length();
+        int maxLen = items.values().stream()
+                .mapToInt(item -> item.getName().length())
+                .max()
+                .orElse(DEFAULT_WIDTH);
+        int minWidth = (titleLen > maxLen) ? titleLen + 4 : maxLen + 7;
+
+        return (minWidth < initialWidth) ? initialWidth : minWidth;
     }
 }

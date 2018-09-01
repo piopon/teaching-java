@@ -58,7 +58,7 @@ public class ConsoleMenu {
     private String title() {
         return new ConsoleText(title, width)
                 .trim()
-                .align(ConsoleText.CENTER)
+                .align(ConsoleAlign.CENTER)
                 .frame(FRAME)
                 .print()
                 .toUpperCase();
@@ -67,7 +67,7 @@ public class ConsoleMenu {
     private String menuLine(String text) {
         return new ConsoleText(text, width)
                 .trim()
-                .align(ConsoleText.LEFT)
+                .align(ConsoleAlign.LEFT)
                 .indent(2)
                 .frame(FRAME)
                 .print();
@@ -76,7 +76,7 @@ public class ConsoleMenu {
     private String error(String text) {
         return new ConsoleText(text, width)
                 .trim()
-                .align(ConsoleText.LEFT)
+                .align(ConsoleAlign.LEFT)
                 .indent(2)
                 .frame("!")
                 .print();

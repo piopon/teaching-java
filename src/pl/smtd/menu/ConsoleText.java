@@ -3,9 +3,6 @@ package pl.smtd.menu;
 import java.util.Collections;
 
 public class ConsoleText {
-    public static int LEFT = 0;
-    public static int RIGHT = 1;
-    public static int CENTER = 2;
     private String text;
     private int width;
 
@@ -28,13 +25,13 @@ public class ConsoleText {
         return this;
     }
 
-    public ConsoleText align(int alignment) {
+    public ConsoleText align(ConsoleAlign alignment) {
         int freespace = width - text.length();
-        if (alignment == LEFT) {
+        if (alignment == ConsoleAlign.LEFT) {
             text = text + repeat(" ", freespace);
-        } else if (alignment == RIGHT) {
+        } else if (alignment == ConsoleAlign.RIGHT) {
             text = repeat(" ", freespace) + text;
-        } else if (alignment == CENTER) {
+        } else if (alignment == ConsoleAlign.CENTER) {
             int afterSpace = (freespace % 2 == 0) ? freespace / 2 : freespace / 2 + 1;
             text = repeat(" ", freespace / 2) + text + repeat(" ", afterSpace);
         }

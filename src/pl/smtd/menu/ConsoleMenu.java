@@ -28,7 +28,7 @@ public class ConsoleMenu {
                 System.out.println(menuLine( i + 1 + ") " + items.get(i).getName()));
             }
             System.out.println(separator(SEPARATOR_LITE));
-            System.out.println(menuLine("0) quit"));
+            System.out.println(menuLine("0) Quit"));
             System.out.println(separator(SEPARATOR_BOLD));
 
             System.out.print(FRAME + " SELECT: ");
@@ -37,7 +37,7 @@ public class ConsoleMenu {
                 if (userChoice == -1) {
                     break;
                 } else if (userChoice >= 0 && userChoice < items.size()) {
-                    System.out.println("\n" + items.get(userChoice).getName().toUpperCase());
+                    System.out.println(" ");
                     items.get(userChoice).execute();
                     System.out.println(" ");
                 } else {
@@ -60,7 +60,8 @@ public class ConsoleMenu {
                 .trim()
                 .align(ConsoleText.CENTER)
                 .frame(FRAME)
-                .print();
+                .print()
+                .toUpperCase();
     }
 
     private String menuLine(String text) {

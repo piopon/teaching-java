@@ -11,7 +11,7 @@ public class RecursionExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new DecimalToBinary(), new Fibonacci(), new QuickPower());
+        addExamples(new DecimalToBinary(), new Fibonacci(), new QuickPower(), new LinkedList());
 
         ConsoleMenu recursionMenu = new ConsoleMenu(getName(), menuWidth, recursionExamples);
         recursionMenu.show();

@@ -2,6 +2,7 @@ package pl.smtd.recursion;
 
 import pl.smtd.menu.ConsoleMenu;
 import pl.smtd.menu.ConsoleExample;
+import pl.smtd.recursion.dec2bin.DecimalToBinary;
 import pl.smtd.recursion.fibonacci.Fibonacci;
 import pl.smtd.recursion.list.LinkedList;
 

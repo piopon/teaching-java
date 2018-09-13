@@ -5,6 +5,7 @@ import pl.smtd.menu.ConsoleExample;
 import pl.smtd.recursion.dec2bin.DecimalToBinary;
 import pl.smtd.recursion.fibonacci.Fibonacci;
 import pl.smtd.recursion.list.LinkedList;
+import pl.smtd.recursion.power.QuickPower;
 
 import java.util.*;
 

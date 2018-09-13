@@ -1,4 +1,4 @@
-package pl.smtd.recursion;
+package pl.smtd.recursion.list;
 
 import pl.smtd.menu.ConsoleExample;
 

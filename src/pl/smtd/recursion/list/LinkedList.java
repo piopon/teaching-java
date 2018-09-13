@@ -9,7 +9,7 @@ public class LinkedList implements ConsoleExample {
     public void execute() {
         fillList();
         System.out.println("Connection sequence (" + list.getSize() + " elements): ");
-        list.print();
+        System.out.println(list);
         System.out.println(" ");
         list.clear();
     }

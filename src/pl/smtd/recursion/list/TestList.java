@@ -46,8 +46,9 @@ public class TestList {
         }
     }
 
-    public void print() {
-        print(headNode);
+    @Override
+    public String toString() {
+        return print(headNode);
     }
 
     private TestNode getLastNode() {
@@ -67,12 +68,11 @@ public class TestList {
         return currentNode;
     }
 
-    private void print(TestNode n) {
+    private String print(TestNode n) {
         if (n != null) {
-            System.out.print(n + " --> ");
-            print(n.getNext());
+            return n + " --> " + print(n.getNext());
         } else {
-            System.out.print("[null]");
+            return "[null]";
         }
     }
 

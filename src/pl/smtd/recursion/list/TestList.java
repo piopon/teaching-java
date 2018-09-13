@@ -44,6 +44,7 @@ public class TestList {
             nextNode = currentNode.getNext();
             currentNode.setNext(null);
         }
+        headNode = null;
     }
 
     @Override

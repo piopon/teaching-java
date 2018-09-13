@@ -7,11 +7,10 @@ public class LinkedList implements ConsoleExample {
 
     @Override
     public void execute() {
-        fillList();
+        buildTestList();
         System.out.println("Connection sequence (" + list.getSize() + " elements): ");
-        System.out.println(list);
-        System.out.println(" ");
-        list.clear();
+        System.out.println(list + "\n");
+        cleanTestList();
     }
 
     @Override
@@ -19,12 +18,16 @@ public class LinkedList implements ConsoleExample {
         return "Linked list";
     }
 
-    private void fillList() {
+    private void buildTestList() {
         list.add(new TestNode("1"));
         list.insert(new TestNode("2"),1);
         list.add(new TestNode("3"));
         list.add(new TestNode("5"));
         list.insert(new TestNode("4"),3);
         list.insert(new TestNode("last"),10);
+    }
+
+    private void cleanTestList() {
+        list.clear();
     }
 }

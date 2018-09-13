@@ -48,40 +48,12 @@ public class QuickPower implements ConsoleExample {
     }
 
     private void comparePowerMethods(double num, int exp) {
-        Timer mathPower = new Timer(Math::pow);
+        TestTimer mathPower = new TestTimer(Math::pow);
         mathPower.execute(num, exp);
         mathPower.summary("Math::pow");
 
-        Timer quickPower = new Timer(this::power);
+        TestTimer quickPower = new TestTimer(this::power);
         quickPower.execute(num, exp);
         quickPower.summary("this::pow");
-    }
-
-    private class Timer {
-        private BiFunction<Double, Integer, Double> function;
-        private long time;
-        private double result;
-        private double doubleArg;
-        private int intArg;
-
-        public Timer(BiFunction<Double, Integer, Double> function) {
-            this.function = function;
-        }
-
-        public void execute(double doubleNum, int intNum) {
-            long timeStart = System.nanoTime();
-            result = function.apply(doubleNum, intNum);
-            long timeStop = System.nanoTime();
-            //store data
-            doubleArg = doubleNum;
-            intArg = intNum;
-            time = timeStop - timeStart;
-        }
-
-        public void summary(String title) {
-            String resultMessage = doubleArg + " ^ " + intArg + " = " + result;
-            String timeMessage = "time = " + time + "ns";
-            System.out.println(title + ": " + resultMessage + " [ " + timeMessage + " ]");
-        }
     }
 }

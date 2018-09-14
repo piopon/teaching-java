@@ -23,9 +23,13 @@ public class TestTimer {
         time = timeStop - timeStart;
     }
 
-    public void summary(String title) {
-        String resultMessage = doubleArg + " ^ " + intArg + " = " + result;
+    public Double getResult() {
+        return result;
+    }
+
+    public String getSummary(String title) {
+        String resultMessage = doubleArg + " ^ " + intArg + " = " + getResult();
         String timeMessage = "time = " + time + "ns";
-        System.out.println(title + ": " + resultMessage + " [ " + timeMessage + " ]");
+        return title + ": " + resultMessage + " [ " + timeMessage + " ]";
     }
 }

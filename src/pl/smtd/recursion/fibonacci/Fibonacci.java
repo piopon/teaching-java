@@ -21,7 +21,7 @@ public class Fibonacci implements ConsoleExample {
         return "Fibonacci";
     }
 
-    private int fibonacci(int num) {
+    public int fibonacci(int num) {
         if (num == 1 || num == 2) {
             return 1;
         }

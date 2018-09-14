@@ -3,7 +3,6 @@ package pl.smtd.recursion.power;
 import pl.smtd.menu.ConsoleExample;
 
 import java.util.Scanner;
-import java.util.function.BiFunction;
 
 public class QuickPower implements ConsoleExample {
     Scanner in = new Scanner(System.in);
@@ -26,7 +25,7 @@ public class QuickPower implements ConsoleExample {
         return "Raise number to power";
     }
 
-    private double power(double base, int exponent) {
+    public double power(double base, int exponent) {
         double y;
         if (exponent == 0) {
             return 1.0;
@@ -50,10 +49,10 @@ public class QuickPower implements ConsoleExample {
     private void comparePowerMethods(double num, int exp) {
         TestTimer mathPower = new TestTimer(Math::pow);
         mathPower.execute(num, exp);
-        mathPower.summary("Math::pow");
+        System.out.println(mathPower.getSummary("Math::pow"));
 
         TestTimer quickPower = new TestTimer(this::power);
         quickPower.execute(num, exp);
-        quickPower.summary("this::pow");
+        System.out.println(quickPower.getSummary("this::pow"));
     }
 }

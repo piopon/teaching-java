@@ -3,6 +3,8 @@ package pl.smtd.recursion;
 import pl.smtd.menu.ConsoleMenu;
 import pl.smtd.menu.ConsoleExample;
 import pl.smtd.recursion.dec2bin.DecimalToBinary;
+import pl.smtd.recursion.divisor.CommonDivisor;
+import pl.smtd.recursion.factorial.Factorial;
 import pl.smtd.recursion.fibonacci.Fibonacci;
 import pl.smtd.recursion.list.LinkedList;
 import pl.smtd.recursion.power.QuickPower;
@@ -15,7 +17,9 @@ public class RecursionExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new DecimalToBinary(), new Fibonacci(), new QuickPower(), new LinkedList());
+        addExamples(new Factorial(), new Fibonacci(),
+                    new DecimalToBinary(), new CommonDivisor(),
+                    new QuickPower(), new LinkedList());
 
         ConsoleMenu recursionMenu = new ConsoleMenu(getName(), menuWidth, recursionExamples);
         recursionMenu.show();

@@ -34,4 +34,29 @@ public class DecimalToBinary implements ConsoleExample {
         }
         return "";
     }
+
+    private static String formatBin(String bin) {
+        int bitsPerGroup = 4;
+
+        return divideGroup(fillToGroup(bin, bitsPerGroup), bitsPerGroup);
+    }
+
+    private static String fillToGroup(String input, int groupSize) {
+        String output = input;
+        int groups = (input.length()/groupSize + 1);
+        int zerosToAdd = groups * groupSize - input.length();
+        for (int i = 0; i < zerosToAdd; i++) {
+            output = "0" + output;
+        }
+        return output;
+    }
+
+    private static String divideGroup(String input, int groupSize) {
+        StringBuilder out = new StringBuilder(input);
+        int divideCount = input.length() / groupSize - 1;
+        for (int i = divideCount; i > 0; i--) {
+            out.insert(i * groupSize, " ");
+        }
+        return out.toString();
+    }
 }

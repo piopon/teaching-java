@@ -5,22 +5,21 @@ import pl.smtd.menu.ConsoleExample;
 import java.util.Scanner;
 
 public class DecimalToBinary implements ConsoleExample {
-    private String prompt = "Enter an integer [1 - 1000 | Q to exit]: ";
+    int minInt = 1;
+    int maxInt = 1000;
+    private String prompt = "Enter an integer [" + minInt + " - " + maxInt + "]: ";
 
     @Override
     public void execute() {
         Scanner input = new Scanner(System.in);
         System.out.print(prompt);
-        while(input.hasNextInt()) {
-            int decimal = input.nextInt();
-            if (decimal >= 1 && decimal <= 1000) {
-                System.out.print("DECIMAL: "+ decimal +" -> BINARY: ");
-                decToBin(decimal);
-                System.out.println(" ");
-            } else {
-                System.out.println("ERROR: Wrong number");
-            }
-            System.out.print(prompt);
+        int decimal = input.nextInt();
+        if (decimal >= minInt && decimal <= maxInt) {
+            System.out.print("DECIMAL: " + decimal + " -> BINARY: ");
+            System.out.print(decToBin(decimal));
+            System.out.println(" ");
+        } else {
+            System.out.println("ERROR: Wrong number");
         }
     }
 
@@ -29,10 +28,10 @@ public class DecimalToBinary implements ConsoleExample {
         return "Decimal to Binary";
     }
 
-    private static void decToBin(int dec) {
+    private static String decToBin(int dec) {
         if (dec > 0) {
-            decToBin(dec/2);
-            System.out.printf("%d", dec%2);
+            return decToBin(dec / 2) + dec%2;
         }
+        return "";
     }
 }

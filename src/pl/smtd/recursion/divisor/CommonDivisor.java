@@ -13,8 +13,11 @@ public class CommonDivisor implements ConsoleExample {
         int num1 = in.nextInt();
         System.out.print("  +-- number 2: ");
         int num2 = in.nextInt();
-        int gcd = greatestCommonDivisor(num1, num2);
-        System.out.println("Greatest common divisor of " + num1 + " and " + num2 + " is: " + gcd);
+        int gcdR = greatestCommonDivisor(num1, num2);
+        int gcdL = greatestCommonDivisorLoop(num1, num2);
+        System.out.println("Greatest common divisor of " + num1 + " and " + num2 + " is:");
+        System.out.println("  +-- " + gcdR + " [recursion]");
+        System.out.println("  +-- " + gcdL + " [in a loop]");
         System.out.println(" ");
     }
 
@@ -33,5 +36,18 @@ public class CommonDivisor implements ConsoleExample {
             return number1;
         }
         return greatestCommonDivisor(number2, number1%number2);
+    }
+
+    public int greatestCommonDivisorLoop(int number1, int number2) {
+        int smaller = (number1 < number2) ? number1 : number2;
+        int lastDivider = 1;
+        int commonDivider = 0;
+        while (lastDivider <= smaller) {
+            if (number1%lastDivider == 0 && number2%lastDivider == 0) {
+                commonDivider = lastDivider;
+            }
+            lastDivider++;
+        }
+        return commonDivider;
     }
 }

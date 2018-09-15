@@ -13,7 +13,7 @@ public class TreeExplorer implements ConsoleExample {
         String currentPath = Paths.get(new File("").getAbsolutePath())
                 .resolve("src")
                 .resolve("pl")
-                .resolve("smtd")
+                .resolve("smtc")
                 .resolve("recursion")
                 .toString();
         System.out.println(currentPath);

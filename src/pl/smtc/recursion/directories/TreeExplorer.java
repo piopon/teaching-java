@@ -10,12 +10,7 @@ public class TreeExplorer implements ConsoleExample {
 
     @Override
     public void execute() {
-        String currentPath = Paths.get(new File("").getAbsolutePath())
-                .resolve("src")
-                .resolve("pl")
-                .resolve("smtc")
-                .resolve("recursion")
-                .toString();
+        String currentPath = getCurrentDirectory();
         System.out.println(currentPath);
         scanDirectory(currentPath);
     }
@@ -25,21 +20,28 @@ public class TreeExplorer implements ConsoleExample {
         return "Directory explorer";
     }
 
+    public String getCurrentDirectory() {
+        return Paths.get(new File("").getAbsolutePath())
+                .resolve("src")
+                .resolve("pl")
+                .resolve("smtc")
+                .resolve("recursion")
+                .toString();
+    }
+
     public void scanDirectory(String filePath) {
         File currItem = new File(filePath);
-
-        if (!currItem.exists()) {
-            return;
-        } else if (currItem.isFile()) {
-            System.out.println(formatter.printFile(currItem.getName()));
-            return;
-        } else {
-            System.out.println(formatter.printDir(currItem.getName()));
-            System.out.println(formatter.goLevelDown());
-            for (String item : currItem.list()) {
-                scanDirectory(currItem + File.separator + item);
+        if (currItem.exists()) {
+            if (currItem.isFile()) {
+                System.out.println(formatter.printFile(currItem.getName()));
+            } else {
+                System.out.println(formatter.printDir(currItem.getName()));
+                System.out.println(formatter.goLevelDown());
+                for (String item : currItem.list()) {
+                    scanDirectory(currItem + File.separator + item);
+                }
+                System.out.println(formatter.goLevelUp());
             }
-            System.out.println(formatter.goLevelUp());
         }
     }
 }

@@ -1,4 +1,4 @@
-package pl.smtd.recursion.list;
+package pl.smtc.recursion.list;
 
 public class TestNode {
     private String id;

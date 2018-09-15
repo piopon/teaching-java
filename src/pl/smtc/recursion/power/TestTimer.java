@@ -1,4 +1,4 @@
-package pl.smtd.recursion.power;
+package pl.smtc.recursion.power;
 
 import java.util.function.BiFunction;
 

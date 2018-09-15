@@ -1,6 +1,6 @@
-package pl.smtd.recursion.factorial;
+package pl.smtc.recursion.factorial;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 import java.util.Scanner;
 import java.util.function.Function;

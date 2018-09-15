@@ -1,6 +1,6 @@
-package pl.smtd.recursion.directories;
+package pl.smtc.recursion.directories;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 import java.io.File;
 import java.nio.file.Paths;

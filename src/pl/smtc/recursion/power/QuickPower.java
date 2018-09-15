@@ -1,6 +1,6 @@
-package pl.smtd.recursion.power;
+package pl.smtc.recursion.power;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package pl.smtd.recursion.dec2bin;
+package pl.smtc.recursion.dec2bin;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 import java.util.Scanner;
 

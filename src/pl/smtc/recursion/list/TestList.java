@@ -1,4 +1,4 @@
-package pl.smtd.recursion.list;
+package pl.smtc.recursion.list;
 
 public class TestList {
     private TestNode headNode = null;

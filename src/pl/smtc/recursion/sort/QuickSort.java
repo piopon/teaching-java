@@ -1,6 +1,6 @@
-package pl.smtd.recursion.sort;
+package pl.smtc.recursion.sort;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 import java.util.Arrays;
 

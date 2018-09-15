@@ -1,4 +1,4 @@
-package pl.smtd.menu;
+package pl.smtc.menu;
 
 import java.util.Collections;
 

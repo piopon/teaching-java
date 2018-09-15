@@ -1,4 +1,4 @@
-package pl.smtd.recursion.directories;
+package pl.smtc.recursion.directories;
 
 public class TreeFormatter {
     private static String INDENT = "    ";

@@ -1,6 +1,6 @@
-package pl.smtd.recursion.divisor;
+package pl.smtc.recursion.divisor;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 import java.util.Scanner;
 

@@ -1,8 +1,8 @@
-package pl.smtd;
+package pl.smtc;
 
-import pl.smtd.menu.ConsoleExample;
-import pl.smtd.menu.ConsoleMenu;
-import pl.smtd.recursion.RecursionExamples;
+import pl.smtc.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.recursion.RecursionExamples;
 
 import java.util.HashMap;
 import java.util.Map;

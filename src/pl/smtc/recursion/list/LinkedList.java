@@ -1,6 +1,6 @@
-package pl.smtd.recursion.list;
+package pl.smtc.recursion.list;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 public class LinkedList implements ConsoleExample {
     TestList list = new TestList();

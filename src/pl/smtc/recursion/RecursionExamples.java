@@ -1,15 +1,15 @@
-package pl.smtd.recursion;
+package pl.smtc.recursion;
 
-import pl.smtd.menu.ConsoleMenu;
-import pl.smtd.menu.ConsoleExample;
-import pl.smtd.recursion.dec2bin.DecimalToBinary;
-import pl.smtd.recursion.directories.TreeExplorer;
-import pl.smtd.recursion.divisor.CommonDivisor;
-import pl.smtd.recursion.factorial.Factorial;
-import pl.smtd.recursion.fibonacci.Fibonacci;
-import pl.smtd.recursion.list.LinkedList;
-import pl.smtd.recursion.power.QuickPower;
-import pl.smtd.recursion.sort.QuickSort;
+import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.menu.ConsoleExample;
+import pl.smtc.recursion.dec2bin.DecimalToBinary;
+import pl.smtc.recursion.directories.TreeExplorer;
+import pl.smtc.recursion.divisor.CommonDivisor;
+import pl.smtc.recursion.factorial.Factorial;
+import pl.smtc.recursion.fibonacci.Fibonacci;
+import pl.smtc.recursion.list.LinkedList;
+import pl.smtc.recursion.power.QuickPower;
+import pl.smtc.recursion.sort.QuickSort;
 
 import java.util.*;
 

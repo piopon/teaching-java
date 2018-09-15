@@ -1,6 +1,6 @@
-package pl.smtd.recursion.fibonacci;
+package pl.smtc.recursion.fibonacci;
 
-import pl.smtd.menu.ConsoleExample;
+import pl.smtc.menu.ConsoleExample;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package pl.smtd.recursion.dec2bin;
+package pl.smtc.recursion.dec2bin;
 
 public class BinaryFormatter {
 

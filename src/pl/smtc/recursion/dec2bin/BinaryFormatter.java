@@ -8,7 +8,7 @@ public class BinaryFormatter {
 
     private static String fillToGroup(String input, int groupSize) {
         String output = input;
-        int groups = (input.length() / groupSize) + (input.length() % groupSize);
+        int groups = (input.length() / groupSize) + (input.length() % groupSize == 0 ? 0 : 1);
         for (int i = 0; i < groups * groupSize - input.length(); i++) {
             output = "0" + output;
         }

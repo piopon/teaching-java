@@ -9,6 +9,7 @@ import pl.smtd.recursion.factorial.Factorial;
 import pl.smtd.recursion.fibonacci.Fibonacci;
 import pl.smtd.recursion.list.LinkedList;
 import pl.smtd.recursion.power.QuickPower;
+import pl.smtd.recursion.sort.QuickSort;
 
 import java.util.*;
 
@@ -20,7 +21,8 @@ public class RecursionExamples implements ConsoleExample {
     public void execute() {
         addExamples(new Factorial(), new Fibonacci(),
                     new DecimalToBinary(), new CommonDivisor(),
-                    new QuickPower(), new LinkedList(), new TreeExplorer());
+                    new QuickPower(), new LinkedList(),
+                    new TreeExplorer(), new QuickSort());
 
         ConsoleMenu recursionMenu = new ConsoleMenu(getName(), menuWidth, recursionExamples);
         recursionMenu.show();

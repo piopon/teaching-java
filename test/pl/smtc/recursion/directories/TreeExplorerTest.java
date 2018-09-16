@@ -1,5 +1,6 @@
 package pl.smtc.recursion.directories;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -21,6 +22,11 @@ class TreeExplorerTest {
         treeExplorer = new TreeExplorer();
         System.setOut(new PrintStream(OUTPUT_STREAM));
         sourceDir = Paths.get(new File("").getAbsolutePath(), "src", "pl", "smtc", "recursion");
+    }
+
+    @AfterAll
+    static void tearDown() {
+        System.setOut(System.out);
     }
 
     @Test

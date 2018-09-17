@@ -31,7 +31,7 @@ class DecimalToBinaryTest {
     }
 
     @Test
-    void executeShouldOutputWrongNumberIfOutsideRange() {
+    void executeShouldOutputWrongNumberErrorIfOutsideRange() {
         simulateUserInput("-1");
         decToBin.execute();
         String output = OUTPUT_STREAM.toString();

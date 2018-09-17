@@ -31,7 +31,7 @@ class CommonDivisorTest {
     }
 
     @Test
-    void execute() {
+    void executeShouldOutputCorrectDivisorOfTwoInputtedNumbers() {
         simulateUserInput("7 56");
         commonDivisor.execute();
         String output = OUTPUT_STREAM.toString();

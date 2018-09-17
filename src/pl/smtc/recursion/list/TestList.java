@@ -3,27 +3,31 @@ package pl.smtc.recursion.list;
 public class TestList {
     private TestNode headNode = null;
 
-    public void add(TestNode newNode) {
+    public int add(TestNode newNode) {
         if (headNode == null) {
             headNode = newNode;
+            return 0;
         } else {
             TestNode lastNode = getLastNode();
             lastNode.setNext(newNode);
+            return getSize() - 1;
         }
     }
 
-    public void insert(TestNode newNode, int position) {
+    public int insert(TestNode newNode, int position) {
         if (position == 0) {
             TestNode oldHeadNode = headNode;
             headNode = newNode;
             headNode.setNext(oldHeadNode);
+            return position;
         } else if (position >= getSize()) {
-            add(newNode);
+            return add(newNode);
         } else {
             TestNode prevNode = getNode(position - 1);
             TestNode currentNode = getNode(position);
             prevNode.setNext(newNode);
             newNode.setNext(currentNode);
+            return position;
         }
     }
 

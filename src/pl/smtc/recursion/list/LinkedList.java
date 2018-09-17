@@ -3,7 +3,7 @@ package pl.smtc.recursion.list;
 import pl.smtc.menu.ConsoleExample;
 
 public class LinkedList implements ConsoleExample {
-    TestList list = new TestList();
+    private TestList list = new TestList();
 
     @Override
     public void execute() {

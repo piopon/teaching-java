@@ -5,6 +5,7 @@ import pl.smtc.menu.ConsoleExample;
 import java.util.Arrays;
 
 public class QuickSort implements ConsoleExample {
+    
     @Override
     public void execute() {
         int[] input = {23, 31, 1, 21, 36, 72, 100, -10, 0, 23};

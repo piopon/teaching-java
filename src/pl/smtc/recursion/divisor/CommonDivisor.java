@@ -5,6 +5,7 @@ import pl.smtc.menu.ConsoleExample;
 import java.util.Scanner;
 
 public class CommonDivisor implements ConsoleExample {
+
     @Override
     public void execute() {
         Scanner in = new Scanner(System.in);

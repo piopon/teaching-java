@@ -5,15 +5,23 @@ import pl.smtc.menu.ConsoleExample;
 import java.util.Scanner;
 
 public class QuickPower implements ConsoleExample {
-    Scanner in = new Scanner(System.in);
 
     @Override
     public void execute() {
+        Scanner in = new Scanner(System.in);
         System.out.print("Enter number base: ");
         double number = in.nextDouble();
         System.out.print("Enter exponent: ");
         int exp = in.nextInt();
-        if (doCompare()) {
+
+        //ignore last return key press (if present)
+        if (in.hasNextLine()) {
+            in.nextLine();
+        }
+        System.out.print("Compare with regular Math.pow method? [Y/N] ");
+        String decision = in.nextLine().toUpperCase();
+
+        if (decision.equals("Y")) {
             comparePowerMethods(number, exp);
         } else {
             System.out.println("RESULT: " + number + " ^ " + exp + " = " + power(number, exp));
@@ -36,14 +44,6 @@ public class QuickPower implements ConsoleExample {
             return y;
         }
         return base * y;
-    }
-
-    private boolean doCompare() {
-        in.nextLine();
-        System.out.print("Compare with regular Math.pow method? [Y/N] ");
-        String compareReq = in.nextLine();
-
-        return compareReq.toUpperCase().equals("Y");
     }
 
     private void comparePowerMethods(double num, int exp) {

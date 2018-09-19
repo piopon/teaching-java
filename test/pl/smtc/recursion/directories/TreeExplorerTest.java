@@ -27,6 +27,7 @@ class TreeExplorerTest {
     @AfterAll
     static void tearDown() {
         System.setOut(System.out);
+        OUTPUT_STREAM.reset();
     }
 
     @Test

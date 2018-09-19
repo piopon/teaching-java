@@ -23,6 +23,7 @@ class MainTest {
     @AfterEach
     void teardown() {
         System.setOut(System.out);
+        OUTPUT_STREAM.reset();
     }
 
     @Test

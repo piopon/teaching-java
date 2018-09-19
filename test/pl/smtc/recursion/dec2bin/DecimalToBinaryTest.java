@@ -28,6 +28,7 @@ class DecimalToBinaryTest {
     static void tearDown() {
         System.setIn(System.in);
         System.setOut(System.out);
+        OUTPUT_STREAM.reset();
     }
 
     @Test

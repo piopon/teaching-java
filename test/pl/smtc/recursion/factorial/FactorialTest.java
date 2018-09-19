@@ -28,6 +28,7 @@ class FactorialTest {
     void teardown() {
         System.setIn(System.in);
         System.setOut(System.out);
+        OUTPUT_STREAM.reset();
     }
 
     @Test

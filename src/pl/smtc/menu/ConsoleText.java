@@ -53,6 +53,9 @@ public class ConsoleText {
     }
 
     private String repeat(String input, int times) {
+        if (times <= 0) {
+            return input;
+        }
         return String.join("", Collections.nCopies(times, input));
     }
 }

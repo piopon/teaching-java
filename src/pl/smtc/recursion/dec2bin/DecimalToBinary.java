@@ -30,7 +30,9 @@ public class DecimalToBinary implements ConsoleExample {
 
     public static String decToBin(int dec) {
         if (dec > 0) {
-            return decToBin(dec / 2) + dec%2;
+            return decToBin(dec / 2) + dec % 2;
+        } else if (dec < 0) {
+            throw new IllegalArgumentException("ERROR: only positive numbers!");
         }
         return "";
     }

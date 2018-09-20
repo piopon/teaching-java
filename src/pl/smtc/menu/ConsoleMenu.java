@@ -10,7 +10,6 @@ public class ConsoleMenu {
     private static int INDENTATION = 2;
 
     private Map<Integer, ConsoleExample> items;
-    private Scanner input = new Scanner(System.in);
     private String title;
     private int width;
 
@@ -21,6 +20,7 @@ public class ConsoleMenu {
     }
 
     public void show() {
+        Scanner input = new Scanner(System.in);
         while (true) {
             System.out.println(separator(SEPARATOR_BOLD));
             System.out.println(title());

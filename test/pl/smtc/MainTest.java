@@ -33,6 +33,7 @@ class MainTest {
         String output = OUTPUT_STREAM.toString();
         assertTrue(output.contains("MAIN MENU"));
         assertTrue(output.contains("1) Recursion examples"));
+        assertTrue(output.contains("2) Concurrency examples"));
     }
 
     private void simulateUserInput(String simInput) {

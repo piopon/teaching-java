@@ -1,4 +1,4 @@
-package pl.smtc.threads;
+package pl.smtc.threads.start.executors;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,34 +10,36 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ConcurrencyExamplesTest {
-    private ConcurrencyExamples concurrencyExamples;
+class UseExecutorsTest {
+    private UseExecutors useExecutors;
     private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
     @BeforeEach
     void setup() {
-        concurrencyExamples = new ConcurrencyExamples();
+        useExecutors = new UseExecutors();
         System.setOut(new PrintStream(OUTPUT_STREAM));
     }
 
     @AfterEach
     void teardown() {
+        System.setIn(System.in);
         System.setOut(System.out);
         OUTPUT_STREAM.reset();
     }
 
     @Test
     void execute() {
-        simulateUserInput("0");
-        concurrencyExamples.execute();
+        simulateUserInput("1" + System.lineSeparator() + "1" + System.lineSeparator());
+        useExecutors.execute();
         String output = OUTPUT_STREAM.toString();
-        assertTrue(output.contains("CONCURRENCY EXAMPLES"));
-        assertTrue(output.contains("1) Start threads"));
+        assertTrue(output.contains("ExecutorService -> 1 tasks submitted!"));
+        assertTrue(output.contains("ExecutorService -> running with 1 threads!"));
+        assertTrue(output.contains("ExecutorService -> all tasks completed!"));
     }
 
     @Test
     void getName() {
-        assertEquals("Concurrency examples", concurrencyExamples.getName());
+        assertEquals("ExecutorService class usage", useExecutors.getName());
     }
 
     private void simulateUserInput(String simInput) {

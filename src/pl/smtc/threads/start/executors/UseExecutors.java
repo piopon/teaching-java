@@ -19,7 +19,7 @@ public class UseExecutors implements ConsoleExample {
 
         ExecutorService executor = Executors.newFixedThreadPool(threadsNo);
         for (int i = 0; i < tasksToDo; i++) {
-            executor.submit(new TestThread(i, false));
+            executor.submit(new TestThread(i, 10, false));
         }
         executor.shutdown();
 

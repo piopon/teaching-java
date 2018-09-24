@@ -8,6 +8,15 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class UseExecutors implements ConsoleExample {
+    private int threadCount;
+
+    public UseExecutors() {
+        this.threadCount = 50;
+    }
+
+    public UseExecutors(int threadCount) {
+        this.threadCount = threadCount;
+    }
 
     @Override
     public void execute() {
@@ -19,7 +28,7 @@ public class UseExecutors implements ConsoleExample {
 
         ExecutorService executor = Executors.newFixedThreadPool(threadsNo);
         for (int i = 0; i < tasksToDo; i++) {
-            executor.submit(new TestThread(i, 10, false));
+            executor.submit(new TestThread(i, threadCount, false));
         }
         executor.shutdown();
 

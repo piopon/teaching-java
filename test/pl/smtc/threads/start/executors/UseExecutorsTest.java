@@ -16,7 +16,7 @@ class UseExecutorsTest {
 
     @BeforeEach
     void setup() {
-        useExecutors = new UseExecutors();
+        useExecutors = new UseExecutors(10);
         System.setOut(new PrintStream(OUTPUT_STREAM));
     }
 

@@ -3,17 +3,19 @@ package pl.smtc.threads;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.threads.start.StartingThreads;
+import pl.smtc.threads.stop.StoppingThreads;
+import pl.smtc.threads.sync.SynchronizingThreads;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ConcurrencyExamples implements ConsoleExample {
-    Map<Integer, ConsoleExample> concurrencyExamples = new HashMap<>();
+    private Map<Integer, ConsoleExample> concurrencyExamples = new HashMap<>();
     private int menuWidth = 35;
 
     @Override
     public void execute() {
-        addExamples(new StartingThreads());
+        addExamples(new StartingThreads(), new StoppingThreads());
 
         ConsoleMenu concurrencyMenu = new ConsoleMenu(getName(), menuWidth, concurrencyExamples);
         concurrencyMenu.show();

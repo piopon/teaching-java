@@ -15,7 +15,7 @@ public class ConcurrencyExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new StartingThreads(), new StoppingThreads());
+        addExamples(new StartingThreads(), new StoppingThreads(), new SynchronizingThreads());
 
         ConsoleMenu concurrencyMenu = new ConsoleMenu(getName(), menuWidth, concurrencyExamples);
         concurrencyMenu.show();

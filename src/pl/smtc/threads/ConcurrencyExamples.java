@@ -2,6 +2,7 @@ package pl.smtc.threads;
 
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.threads.comm.ThreadsCommunication;
 import pl.smtc.threads.start.StartingThreads;
 import pl.smtc.threads.stop.StoppingThreads;
 import pl.smtc.threads.sync.SynchronizingThreads;
@@ -15,7 +16,8 @@ public class ConcurrencyExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new StartingThreads(), new StoppingThreads(), new SynchronizingThreads());
+        addExamples(new StartingThreads(), new StoppingThreads(), new ThreadsCommunication(),
+                    new SynchronizingThreads());
 
         ConsoleMenu concurrencyMenu = new ConsoleMenu(getName(), menuWidth, concurrencyExamples);
         concurrencyMenu.show();

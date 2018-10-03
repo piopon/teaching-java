@@ -4,7 +4,7 @@ import pl.smtc.menu.ConsoleExample;
 
 import java.util.Scanner;
 
-public class Deadlock implements ConsoleExample {
+public class ThreadsDeadlock implements ConsoleExample {
     @Override
     public void execute() {
         Scanner in = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class Deadlock implements ConsoleExample {
 
     @Override
     public String getName() {
-        return "Deadlock";
+        return "Threads deadlock";
     }
 
     private Thread createThread(String title, Runnable action) {

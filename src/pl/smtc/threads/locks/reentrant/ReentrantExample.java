@@ -33,7 +33,7 @@ public class ReentrantExample implements ConsoleExample {
 
     @Override
     public String getName() {
-        return "Reentrant lock";
+        return "Reentrant lock example";
     }
 
     private void waitEnterKey(Scanner scanner) {

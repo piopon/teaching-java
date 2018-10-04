@@ -1,6 +1,5 @@
 package pl.smtc.threads.issues.starvation;
 
-import javafx.concurrent.Worker;
 import pl.smtc.menu.ConsoleExample;
 
 public class ThreadsStarvation implements ConsoleExample {

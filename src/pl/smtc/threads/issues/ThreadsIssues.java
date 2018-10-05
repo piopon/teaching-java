@@ -3,6 +3,7 @@ package pl.smtc.threads.issues;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.threads.issues.deadlock.ThreadsDeadlock;
+import pl.smtc.threads.issues.livelock.ThreadsLivelock;
 import pl.smtc.threads.issues.lockout.NestedLockout;
 import pl.smtc.threads.issues.race.RaceCondition;
 import pl.smtc.threads.issues.slip.SlipConditions;
@@ -18,7 +19,7 @@ public class ThreadsIssues implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new RaceCondition(), new NestedLockout(), new ThreadsDeadlock(),
-                    new ThreadsStarvation(), new SlipConditions());
+                    new ThreadsStarvation(), new SlipConditions(), new ThreadsLivelock());
 
         ConsoleMenu issuesMenu = new ConsoleMenu(getName(), menuWidth, issuesExamples);
         issuesMenu.show();

@@ -1,4 +1,4 @@
-package pl.smtc.threads.locks.read_write;
+package pl.smtc.threads.locks.stamped;
 
 import pl.smtc.menu.ConsoleExample;
 
@@ -7,14 +7,13 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReadWriteLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.concurrent.locks.StampedLock;
 
-public class ReadWriteExample implements ConsoleExample {
+public class StampedExample implements ConsoleExample {
     @Override
     public void execute() {
-        Map<String, String> map = new HashMap<>();
-        ReadWriteLock lock = new ReentrantReadWriteLock();
+        Map<Integer, Integer> map = new HashMap<>();
+        StampedLock lock = new StampedLock();
         try {
             ExecutorService executorService = Executors.newFixedThreadPool(3);
 
@@ -32,6 +31,6 @@ public class ReadWriteExample implements ConsoleExample {
 
     @Override
     public String getName() {
-        return "Read write lock example";
+        return "Stamped lock example";
     }
 }

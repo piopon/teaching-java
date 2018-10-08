@@ -2,7 +2,6 @@ package pl.smtc.base;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import pl.smtc.threads.stop.interrupt.AlphabetThread;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

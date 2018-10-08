@@ -2,12 +2,12 @@ package pl.smtc.base;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import pl.smtc.threads.stop.interrupt.AlphabetThread;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public abstract class BaseTestInOut {
+public abstract class BaseTestOut {
     private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
     @BeforeEach
@@ -18,7 +18,6 @@ public abstract class BaseTestInOut {
 
     @AfterEach
     void teardown() {
-        System.setIn(System.in);
         System.setOut(System.out);
         OUTPUT_STREAM.reset();
     }
@@ -27,9 +26,5 @@ public abstract class BaseTestInOut {
 
     protected String getOutput() {
         return OUTPUT_STREAM.toString();
-    }
-
-    protected void simulateUserInput(String simInput) {
-        System.setIn(new ByteArrayInputStream(simInput.getBytes()));
     }
 }

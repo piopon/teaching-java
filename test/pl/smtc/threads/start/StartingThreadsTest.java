@@ -40,7 +40,7 @@ class StartingThreadsTest {
     }
 
     @Test
-    void getName() {
+    void getNameShouldReturnStartThreads() {
         assertEquals("Start threads", startingThreads.getName());
     }
 

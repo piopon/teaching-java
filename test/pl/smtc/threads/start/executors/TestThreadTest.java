@@ -1,34 +1,22 @@
 package pl.smtc.threads.start.executors;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import pl.smtc.base.BaseTestOut;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestThreadTest {
+class TestThreadTest extends BaseTestOut {
     TestThread testThread;
-    private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
-    @BeforeEach
-    void setup() {
+    @Override
+    protected void setUp() {
         testThread = new TestThread(7,12,true);
-        System.setOut(new PrintStream(OUTPUT_STREAM));
-    }
-
-    @AfterEach
-    void teardown() {
-        System.setOut(System.out);
-        OUTPUT_STREAM.reset();
     }
 
     @Test
     void runShouldInvokeTestThreadWithCountdown() {
         testThread.run();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("TestThread 7 -> run [start]"));
         assertTrue(output.contains("TestThread 7 -> counter: 0"));
         assertTrue(output.contains("TestThread 7 -> counter: 5"));

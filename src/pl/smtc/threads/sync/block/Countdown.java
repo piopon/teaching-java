@@ -11,7 +11,7 @@ public class Countdown {
     public void countdown(String countdownTitle) {
         System.out.println(countdownTitle + " -> START");
         synchronized (this) {
-            for (decr = startValue; decr > 0; decr--) {
+            for (decr = startValue; decr >= 0; decr--) {
                 System.out.println(countdownTitle + " -> countdown: " + decr);
             }
         }

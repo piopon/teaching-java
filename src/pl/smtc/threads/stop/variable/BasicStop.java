@@ -9,7 +9,7 @@ public class BasicStop implements ConsoleExample {
     @Override
     public void execute() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Press Enter to stop counter thread.");
+        System.out.println("Press Enter to stop counter thread.");
 
         CountThread testThread = new CountThread(1);
         testThread.start();

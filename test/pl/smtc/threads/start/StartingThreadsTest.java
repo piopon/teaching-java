@@ -14,7 +14,7 @@ class StartingThreadsTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldShowMenuWithStartThreadsTitle() {
         simulateUserInput("0");
         startingThreads.execute();
         String output = getOutput();

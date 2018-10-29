@@ -14,7 +14,7 @@ class BasicStopTest extends BaseTestInOut {
     }
 
     @Test
-    void executeShouldRunTest() {
+    void executeShouldRunBasicStopExample() {
         simulateUserInput(System.lineSeparator() + " " + System.lineSeparator());
         basicStop.execute();
         String output = getOutput();

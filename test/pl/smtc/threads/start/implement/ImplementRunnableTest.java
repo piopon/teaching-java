@@ -14,7 +14,7 @@ class ImplementRunnableTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldRunImplementRunnableExample() {
         simulateUserInput(System.lineSeparator() + " " + System.lineSeparator());
         implementRunnable.execute();
         String output = getOutput();
@@ -23,7 +23,7 @@ class ImplementRunnableTest extends BaseTestInOut {
     }
 
     @Test
-    void getName() {
+    void getNameShouldReturnImplementRunnableInterface() {
         assertEquals("Implement Runnable interface", implementRunnable.getName());
     }
 }

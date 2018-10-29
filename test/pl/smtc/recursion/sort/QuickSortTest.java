@@ -1,38 +1,27 @@
 package pl.smtc.recursion.sort;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pl.smtc.base.BaseTestOut;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class QuickSortTest {
+class QuickSortTest extends BaseTestOut {
     private QuickSort quickSort;
-    private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
-    @BeforeEach
-    void setup() {
+    @Override
+    protected void setUp() {
         quickSort = new QuickSort();
-        System.setOut(new PrintStream(OUTPUT_STREAM));
-    }
-
-    @AfterEach
-    void teardown() {
-        System.setOut(System.out);
-        OUTPUT_STREAM.reset();
     }
 
     @Test
     void executeShouldOutputBothInputAndSortedTable() {
         quickSort.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("TO SORT: [23, 31, 1, 21, 36, 72, 100, -10, 0, 23]"));
         assertTrue(output.contains("RESULT:  [-10, 0, 1, 21, 23, 23, 31, 36, 72, 100]"));
     }

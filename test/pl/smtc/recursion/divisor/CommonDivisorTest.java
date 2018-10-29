@@ -1,41 +1,28 @@
 package pl.smtc.recursion.divisor;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pl.smtc.base.BaseTestInOut;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CommonDivisorTest {
+class CommonDivisorTest extends BaseTestInOut {
     private CommonDivisor commonDivisor;
-    private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
-    @BeforeEach
-    void setup() {
+    @Override
+    protected void setUp() {
         commonDivisor = new CommonDivisor();
-        System.setOut(new PrintStream(OUTPUT_STREAM));
-    }
-
-    @AfterEach
-    void teardown() {
-        System.setIn(System.in);
-        System.setOut(System.out);
-        OUTPUT_STREAM.reset();
     }
 
     @Test
     void executeShouldOutputCorrectDivisorOfTwoInputtedNumbers() {
         simulateUserInput("7 56");
         commonDivisor.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("Greatest common divisor of 7 and 56 is:"));
         assertTrue(output.contains("  +-- 7 [recursion]"));
         assertTrue(output.contains("  +-- 7 [in a loop]"));
@@ -87,9 +74,5 @@ class CommonDivisorTest {
                 Arguments.of(100, 10, 10),
                 Arguments.of(235, 210, 5),
                 Arguments.of(1000, 35, 5));
-    }
-
-    private void simulateUserInput(String simInput) {
-        System.setIn(new ByteArrayInputStream(simInput.getBytes()));
     }
 }

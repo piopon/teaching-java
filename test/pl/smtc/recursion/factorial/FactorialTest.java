@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pl.smtc.base.BaseTestInOut;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -14,28 +15,19 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FactorialTest {
+class FactorialTest extends BaseTestInOut {
     private Factorial factorial;
-    private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
-    @BeforeEach
-    void setup() {
+    @Override
+    protected void setUp() {
         factorial = new Factorial();
-        System.setOut(new PrintStream(OUTPUT_STREAM));
-    }
-
-    @AfterEach
-    void teardown() {
-        System.setIn(System.in);
-        System.setOut(System.out);
-        OUTPUT_STREAM.reset();
     }
 
     @Test
     void executeShouldOutputCorrectFactorialOfTwoInputtedNumbers() {
         simulateUserInput("5");
         factorial.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("RESULT (recursive): 5! = 120"));
         assertTrue(output.contains("RESULT (in a loop): 5! = 120"));
     }
@@ -69,9 +61,5 @@ class FactorialTest {
                 Arguments.of(8, 40320),
                 Arguments.of(9, 362880),
                 Arguments.of(10, 3628800));
-    }
-
-    private void simulateUserInput(String simInput) {
-        System.setIn(new ByteArrayInputStream(simInput.getBytes()));
     }
 }

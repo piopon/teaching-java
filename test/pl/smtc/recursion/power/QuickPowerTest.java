@@ -1,41 +1,28 @@
 package pl.smtc.recursion.power;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pl.smtc.base.BaseTestInOut;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class QuickPowerTest {
+class QuickPowerTest extends BaseTestInOut {
     private QuickPower quickPower;
-    private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
-    @BeforeEach
-    void setup() {
+    @Override
+    protected void setUp() {
         quickPower = new QuickPower();
-        System.setOut(new PrintStream(OUTPUT_STREAM));
-    }
-
-    @AfterEach
-    void teardown() {
-        System.setIn(System.in);
-        System.setOut(System.out);
-        OUTPUT_STREAM.reset();
     }
 
     @Test
     void executeShouldOutputNumberRaisedToPowerWithNoCompare() {
         simulateUserInput("3,0 4"+ System.lineSeparator() +"n");
         quickPower.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("RESULT: 3.0 ^ 4 = 81.0"));
     }
 
@@ -43,7 +30,7 @@ class QuickPowerTest {
     void executeShouldOutputNumberRaisedToPowerAdTimeWithCompare() {
         simulateUserInput("3,0 4"+ System.lineSeparator() +"y");
         quickPower.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("Math::pow: 3.0 ^ 4 = 81.0 [ time = "));
         assertTrue(output.contains("this::pow: 3.0 ^ 4 = 81.0 [ time = "));
     }
@@ -65,9 +52,5 @@ class QuickPowerTest {
                 Arguments.of(2.0, 2, 4.0),
                 Arguments.of(5.0, 3, 125.0),
                 Arguments.of(10.0, 3, 1000.0));
-    }
-
-    private void simulateUserInput(String simInput) {
-        System.setIn(new ByteArrayInputStream(simInput.getBytes()));
     }
 }

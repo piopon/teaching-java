@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pl.smtc.base.BaseTestInOut;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -14,28 +15,19 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FibonacciTest {
+class FibonacciTest extends BaseTestInOut {
     private Fibonacci fibonacci;
-    private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
-    @BeforeEach
-    void setup() {
+    @Override
+    protected void setUp() {
         fibonacci = new Fibonacci();
-        System.setOut(new PrintStream(OUTPUT_STREAM));
-    }
-
-    @AfterEach
-    void teardown() {
-        System.setIn(System.in);
-        System.setOut(System.out);
-        OUTPUT_STREAM.reset();
     }
 
     @Test
     void executeShouldOutputCorrectFibonacciNumbers() {
         simulateUserInput("5");
         fibonacci.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("1 1 2 3 5"));
     }
 
@@ -60,9 +52,5 @@ class FibonacciTest {
                 Arguments.of(12, 144),
                 Arguments.of(15, 610),
                 Arguments.of(20, 6765));
-    }
-
-    private void simulateUserInput(String simInput) {
-        System.setIn(new ByteArrayInputStream(simInput.getBytes()));
     }
 }

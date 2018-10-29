@@ -1,41 +1,28 @@
 package pl.smtc.recursion.dec2bin;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pl.smtc.base.BaseTestInOut;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DecimalToBinaryTest {
+class DecimalToBinaryTest extends BaseTestInOut {
     static DecimalToBinary decToBin;
-    private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
 
-    @BeforeAll
-    static void setup() {
+    @Override
+    protected void setUp() {
         decToBin = new DecimalToBinary();
-        System.setOut(new PrintStream(OUTPUT_STREAM));
-    }
-
-    @AfterAll
-    static void tearDown() {
-        System.setIn(System.in);
-        System.setOut(System.out);
-        OUTPUT_STREAM.reset();
     }
 
     @Test
     void executeShouldOutputWrongNumberErrorIfOutsideRange() {
         simulateUserInput("-1");
         decToBin.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("ERROR: Wrong number"));
     }
 
@@ -43,7 +30,7 @@ class DecimalToBinaryTest {
     void executeShouldOutputInputtedDecimalAndConvertedBinary() {
         simulateUserInput("15");
         decToBin.execute();
-        String output = OUTPUT_STREAM.toString();
+        String output = getOutput();
         assertTrue(output.contains("DECIMAL: 15 -> BINARY: 1111"));
     }
 
@@ -80,9 +67,5 @@ class DecimalToBinaryTest {
                 Arguments.of(11111, "10101101100111"),
                 Arguments.of(23456, "101101110100000"),
                 Arguments.of(65535, "1111111111111111"));
-    }
-
-    private void simulateUserInput(String simInput) {
-        System.setIn(new ByteArrayInputStream(simInput.getBytes()));
     }
 }

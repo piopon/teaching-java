@@ -14,7 +14,7 @@ class InterruptStopTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeRunsInterruptStopExample() {
         simulateUserInput(System.lineSeparator() + " " + System.lineSeparator());
         interruptStop.execute();
         String output = getOutput();

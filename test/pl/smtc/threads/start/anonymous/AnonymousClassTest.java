@@ -14,7 +14,7 @@ class AnonymousClassTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldRunAnonymousThreadExample() {
         simulateUserInput(System.lineSeparator() + " " + System.lineSeparator());
         anonymousThread.execute();
         String output = getOutput();
@@ -23,7 +23,7 @@ class AnonymousClassTest extends BaseTestInOut {
     }
 
     @Test
-    void getName() {
+    void getNameShouldReturnAnonymousClassUsage() {
         assertEquals("Anonymous class usage", anonymousThread.getName());
     }
 }

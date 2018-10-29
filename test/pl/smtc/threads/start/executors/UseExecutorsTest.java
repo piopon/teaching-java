@@ -14,7 +14,7 @@ class UseExecutorsTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldRunUseExecutorsExample() {
         simulateUserInput("1" + System.lineSeparator() + "1" + System.lineSeparator());
         useExecutors.execute();
         String output = getOutput();
@@ -24,7 +24,7 @@ class UseExecutorsTest extends BaseTestInOut {
     }
 
     @Test
-    void getName() {
+    void getNameShouldReturnExecutorServiceClassUsage() {
         assertEquals("ExecutorService class usage", useExecutors.getName());
     }
 }

@@ -14,7 +14,7 @@ class ExtendThreadTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldRunExtendThreadExample() {
         simulateUserInput(System.lineSeparator() + " " + System.lineSeparator());
         extendThread.execute();
         String output = getOutput();
@@ -23,7 +23,7 @@ class ExtendThreadTest extends BaseTestInOut {
     }
 
     @Test
-    void getName() {
+    void getNameShouldReturnExtendThreadClass() {
         assertEquals("Extend Thread class", extendThread.getName());
     }
 }

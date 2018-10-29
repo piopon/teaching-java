@@ -14,7 +14,7 @@ class LambdaTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldRunLambdaThreadExample() {
         simulateUserInput(System.lineSeparator() + " " + System.lineSeparator());
         lambdaThread.execute();
         String output = getOutput();
@@ -23,7 +23,7 @@ class LambdaTest extends BaseTestInOut {
     }
 
     @Test
-    void getName() {
+    void getNameShouldReturnLambdaExpressionUsage() {
         assertEquals("Lambda expression usage", lambdaThread.getName());
     }
 }

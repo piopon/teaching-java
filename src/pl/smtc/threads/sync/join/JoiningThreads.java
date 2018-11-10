@@ -5,11 +5,26 @@ import pl.smtc.menu.ConsoleExample;
 import java.util.Scanner;
 
 public class JoiningThreads implements ConsoleExample {
+    private int fetchSimTime;
+    private int fetchWaitTime;
+    private int processSimTime;
+
+    public JoiningThreads() {
+        this.fetchSimTime = 1000;
+        this.fetchWaitTime = 2000;
+        this.processSimTime = 1000;
+    }
+
+    public JoiningThreads(int fetchSimTime, int fetchWaitTime, int processSimTime) {
+        this.fetchSimTime = fetchSimTime;
+        this.fetchWaitTime = fetchWaitTime;
+        this.processSimTime = processSimTime;
+    }
 
     @Override
     public void execute() {
-        FetchDataThread fetchDataThread = new FetchDataThread(1000);
-        Thread processDataThread = new Thread(new ProcessDataThread(fetchDataThread, 2000, 1000));
+        FetchDataThread fetchDataThread = new FetchDataThread(fetchSimTime);
+        Thread processDataThread = new Thread(new ProcessDataThread(fetchDataThread, fetchWaitTime, processSimTime));
         Thread viewDataThread = new Thread(new Runnable() {
             @Override
             public void run() {

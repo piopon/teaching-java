@@ -10,7 +10,7 @@ class UseExecutorsTest extends BaseTestInOut {
 
     @Override
     protected void setUp() {
-        useExecutors = new UseExecutors(10);
+        useExecutors = new UseExecutors(3);
     }
 
     @Test

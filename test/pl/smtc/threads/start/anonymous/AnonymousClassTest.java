@@ -10,7 +10,7 @@ class AnonymousClassTest extends BaseTestInOut {
 
     @Override
     protected void setUp() {
-        anonymousThread = new AnonymousClass(10,false);
+        anonymousThread = new AnonymousClass(3,false);
     }
 
     @Test

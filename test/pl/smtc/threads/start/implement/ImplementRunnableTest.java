@@ -10,7 +10,7 @@ class ImplementRunnableTest extends BaseTestInOut {
 
     @Override
     protected void setUp() {
-        implementRunnable = new ImplementRunnable(10, false);
+        implementRunnable = new ImplementRunnable(3, false);
     }
 
     @Test

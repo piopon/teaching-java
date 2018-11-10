@@ -10,7 +10,7 @@ class TestThreadTest extends BaseTestOut {
 
     @Override
     protected void setUp() {
-        testThread = new TestThread(7,12,true);
+        testThread = new TestThread(7,6,true);
     }
 
     @Test
@@ -20,7 +20,6 @@ class TestThreadTest extends BaseTestOut {
         assertTrue(output.contains("TestThread 7 -> run [start]"));
         assertTrue(output.contains("TestThread 7 -> counter: 0"));
         assertTrue(output.contains("TestThread 7 -> counter: 5"));
-        assertTrue(output.contains("TestThread 7 -> counter: 10"));
         assertTrue(output.contains("TestThread 7 -> run [stop]"));
     }
 }

@@ -10,7 +10,7 @@ class LambdaTest extends BaseTestInOut {
 
     @Override
     protected void setUp() {
-        lambdaThread = new Lambda(10, false);
+        lambdaThread = new Lambda(3, false);
     }
 
     @Test

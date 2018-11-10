@@ -10,7 +10,7 @@ class ExtendThreadTest extends BaseTestInOut {
 
     @Override
     protected void setUp() {
-        extendThread = new ExtendThread(10, false);
+        extendThread = new ExtendThread(3, false);
     }
 
     @Test

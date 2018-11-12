@@ -27,6 +27,5 @@ class JoiningThreadsTest extends BaseTestInOut {
     @Test
     void getNameShouldReturnJoiningThreads() {
         assertEquals("Joining threads", joiningThreads.getName());
-
     }
 }

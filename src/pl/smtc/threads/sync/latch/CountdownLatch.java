@@ -9,9 +9,19 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class CountdownLatch implements ConsoleExample {
-    private final static int MIN_TIME = 500;
-    private final static int MAX_TIME = 2000;
+    private int minTime;
+    private int maxTime;
     Random random = new Random();
+
+    public CountdownLatch() {
+        this.minTime = 500;
+        this.maxTime = 2000;
+    }
+
+    public CountdownLatch(int minTime, int maxTime) {
+        this.minTime = minTime;
+        this.maxTime = maxTime;
+    }
 
     @Override
     public void execute() {
@@ -22,7 +32,7 @@ public class CountdownLatch implements ConsoleExample {
             CountDownLatch countDownLatch = new CountDownLatch(startValue);
             ExecutorService executors = Executors.newFixedThreadPool(startValue);
             for (int i = 0; i < startValue; i++) {
-                int randomTime = random.nextInt(MAX_TIME + 1 - MIN_TIME) + MIN_TIME;
+                int randomTime = random.nextInt(maxTime + 1 - minTime) + minTime;
                 executors.submit(new TestThread(i, randomTime, countDownLatch));
             }
             countDownLatch.await();

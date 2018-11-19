@@ -8,6 +8,16 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class SemaphoreSync implements ConsoleExample {
+    private int simTime;
+
+    public SemaphoreSync() {
+        this.simTime = 500;
+    }
+
+    public SemaphoreSync(int simTime) {
+        this.simTime = simTime;
+    }
+
     @Override
     public void execute() {
         Scanner in = new Scanner(System.in);
@@ -16,7 +26,7 @@ public class SemaphoreSync implements ConsoleExample {
         try {
             ExecutorService executors = Executors.newCachedThreadPool();
             for (int i = 0; i < receiversNo; i++) {
-                executors.submit(() -> SharedResource.getInstance().access(500));
+                executors.submit(() -> SharedResource.getInstance().access(simTime));
             }
             executors.shutdown();
             executors.awaitTermination(60, TimeUnit.SECONDS);

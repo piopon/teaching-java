@@ -1,13 +1,21 @@
 package pl.smtc.threads.comm.basic;
 
 public class CountThread extends Thread {
-    private volatile boolean run = true;
-    private volatile boolean showCounter;
+    protected volatile boolean run = true;
+    protected volatile boolean showCounter;
+    private int maxCount;
     private int id;
 
     public CountThread(int id, boolean showCounter) {
         this.id = id;
         this.showCounter = showCounter;
+        this.maxCount = 0;
+    }
+
+    public CountThread(int id, int maxCount, boolean showCounter) {
+        this.id = id;
+        this.showCounter = showCounter;
+        this.maxCount = maxCount;
     }
 
     @Override
@@ -16,11 +24,14 @@ public class CountThread extends Thread {
         int currentCounter = 0;
         while (this.run) {
             currentCounter %= 1000;
-            if (currentCounter % 10 == 0 && this.showCounter) {
+            if (currentCounter % 5 == 0 && this.showCounter) {
                 System.out.println("CountThread " + id + " -> count: " + currentCounter);
             }
             currentCounter++;
             wait(100);
+            if(currentCounter > maxCount && maxCount > 0) {
+                this.run = false;
+            }
         }
         System.out.println("CountThread " + id + " -> run [stop]");
     }

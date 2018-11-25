@@ -6,6 +6,19 @@ import java.util.Scanner;
 import java.util.concurrent.*;
 
 public class CallableAndFuture implements ConsoleExample {
+    private int maxWaitTime;
+    private int maxExceptionTime;
+
+    public CallableAndFuture() {
+        this.maxWaitTime = 5000;
+        this.maxExceptionTime = 3000;
+    }
+
+    public CallableAndFuture(int maxWaitTime, int maxExceptionTime) {
+        this.maxWaitTime = maxWaitTime;
+        this.maxExceptionTime = maxExceptionTime;
+    }
+
     @Override
     public void execute() {
         try {
@@ -14,7 +27,7 @@ public class CallableAndFuture implements ConsoleExample {
             in.nextLine();
 
             ExecutorService executorService = Executors.newCachedThreadPool();
-            Future<Integer> future = executorService.submit(new MyCallable(5000, 3000));
+            Future<Integer> future = executorService.submit(new MyCallable(maxWaitTime, maxExceptionTime));
             executorService.shutdown();
             executorService.awaitTermination(1,TimeUnit.MINUTES);
 

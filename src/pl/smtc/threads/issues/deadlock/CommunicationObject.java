@@ -12,12 +12,6 @@ public class CommunicationObject {
     private int receiveMaxTime;
     private int lockWaitTimeout;
 
-    public CommunicationObject() {
-        this.sendMaxTime = 2500;
-        this.receiveMaxTime = 2500;
-        this.lockWaitTimeout = 5000;
-    }
-
     public CommunicationObject(int sendMaxTime, int receiveMaxTime, int lockWaitTimeout) {
         this.sendMaxTime = sendMaxTime;
         this.receiveMaxTime = receiveMaxTime;

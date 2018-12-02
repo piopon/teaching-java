@@ -6,25 +6,28 @@ public class Receiver implements Runnable {
     private Random random = new Random();
     private Data data;
     private int maxInterval;
-    private int dataCounter = 0;
+    private int dataCounterCurrent = 0;
+    private int itemsToReceive;
 
-    public Receiver(Data data, int maxInterval) {
+    public Receiver(Data data, int maxInterval, int itemsToReceive) {
         this.data = data;
         this.maxInterval = maxInterval;
+        this.itemsToReceive = itemsToReceive;
     }
 
     @Override
     public void run() {
-        while (true) {
+        while (dataCounterCurrent < itemsToReceive) {
             try {
                 Thread.sleep(random.nextInt(maxInterval));
                 int latestData = data.receive();
                 System.out.println("Receiver -> got item: " + latestData);
-                dataCounter++;
+                dataCounterCurrent++;
             } catch (InterruptedException e) {
-                System.out.println("Receiver -> interrupted (items received: " + dataCounter + ")!");
-                break;
+                System.out.println("Receiver -> interrupted (items received: " + dataCounterCurrent + ")!");
+                return;
             }
         }
+        System.out.println("Receiver -> finished (items received: " + dataCounterCurrent + ")!");
     }
 }

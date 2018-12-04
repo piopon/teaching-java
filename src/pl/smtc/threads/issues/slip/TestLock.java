@@ -1,7 +1,7 @@
 package pl.smtc.threads.issues.slip;
 
 public class TestLock {
-    private boolean isLocked = false    ;
+    private boolean isLocked = false;
 
     public void lock(String parentTitle) throws InterruptedException {
         synchronized (this) {

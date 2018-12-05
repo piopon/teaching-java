@@ -17,16 +17,15 @@ class RaceConditionTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldInvokeRaceConditionExample() {
         simulateUserInput("5");
         raceCondition.execute();
         String output = getOutput();
-        String notExpectedSequence1[] = {"Thread 1 -> START", "Thread 1 -> counter: 1", "Thread 1 -> counter: 2",
-                "Thread 1 -> counter: 3", "Thread 1 -> counter: 4", "Thread 1 -> counter: 5", "Thread 1 -> STOP"};
-        assertFalse(outputContainsInOrder(output, notExpectedSequence1));
-        String notExpectedSequence2[] = {"Thread 2 -> START", "Thread 2 -> counter: 1", "Thread 2 -> counter: 2",
-                "Thread 2 -> counter: 3", "Thread 2 -> counter: 4", "Thread 2 -> counter: 5", "Thread 2 -> STOP"};
-        assertFalse(outputContainsInOrder(output, notExpectedSequence2));
+        String notExpectedSequence[] = {"Thread 1 -> START", "Thread 1 -> counter: 1", "Thread 1 -> counter: 2",
+                "Thread 1 -> counter: 3", "Thread 1 -> counter: 4", "Thread 1 -> counter: 5", "Thread 1 -> STOP",
+                "Thread 2 -> START", "Thread 2 -> counter: 1", "Thread 2 -> counter: 2", "Thread 2 -> counter: 3",
+                "Thread 2 -> counter: 4", "Thread 2 -> counter: 5", "Thread 2 -> STOP"};
+        assertFalse(outputContainsInOrder(output, notExpectedSequence));
     }
 
     @Test

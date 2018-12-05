@@ -25,7 +25,7 @@ class MyCallableTest extends BaseTestOut {
 
     @Test
     void callShouldThrowIfMaxWaitTimeIsSmallerThenExceptionTime() throws Exception {
-        MyCallable callableNOK = new MyCallable(100, 1);
+        MyCallable callableNOK = new MyCallable(150, 0);
         assertThrows(IllegalArgumentException.class, () -> callableNOK.call());
     }
 }

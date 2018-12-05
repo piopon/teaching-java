@@ -2,7 +2,6 @@ package pl.smtc.threads.issues.livelock;
 
 public class PoliteWorker {
     private int id;
-    private String name;
     private boolean active;
 
     public PoliteWorker(int id, boolean active) {

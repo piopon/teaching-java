@@ -3,9 +3,17 @@ package pl.smtc.threads.issues.livelock;
 import pl.smtc.menu.ConsoleExample;
 
 public class ThreadsLivelock implements ConsoleExample {
-    PoliteWorker worker1 = new PoliteWorker(1, true);
-    PoliteWorker worker2 = new PoliteWorker(2, true);
-    final IncrementValue incrementValue = new IncrementValue(worker1, 100);
+    private PoliteWorker worker1 = new PoliteWorker(1, true);
+    private PoliteWorker worker2 = new PoliteWorker(2, true);
+    private final IncrementValue incrementValue;
+
+    public ThreadsLivelock() {
+        incrementValue = new IncrementValue(worker1, 100);
+    }
+
+    public ThreadsLivelock(int maxOwnerChange) {
+        incrementValue = new IncrementValue(worker1, maxOwnerChange);
+    }
 
     @Override
     public void execute() {

@@ -7,6 +7,15 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class FairLock implements ConsoleExample {
     private Lock lock = new ReentrantLock(true);
+    private int maxCount;
+
+    public FairLock() {
+        maxCount = 500;
+    }
+
+    public FairLock(int maxCount) {
+        this.maxCount = maxCount;
+    }
 
     @Override
     public void execute() {
@@ -33,7 +42,7 @@ public class FairLock implements ConsoleExample {
     }
 
     private Thread createThread(String name, int priority) {
-        Thread result = new Thread(new WorkerThread(lock, name, 500));
+        Thread result = new Thread(new WorkerThread(lock, name, maxCount));
         result.setPriority(priority);
 
         return result;

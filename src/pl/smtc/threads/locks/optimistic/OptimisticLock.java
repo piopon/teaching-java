@@ -12,13 +12,28 @@ public class OptimisticLock implements ConsoleExample {
     private int destinationValue = 10;
     private int sourceValue = 0;
     private int readTries = 3;
+    private int fillerHeadsUp;
+    private int writeSimTime;
+    private int readSimTime;
+
+    public OptimisticLock() {
+        this.fillerHeadsUp = 500;
+        writeSimTime = 1000;
+        readSimTime = 1000;
+    }
+
+    public OptimisticLock(int fillerHeadsUp, int writeSimTime, int readSimTime) {
+        this.fillerHeadsUp = fillerHeadsUp;
+        this.writeSimTime = writeSimTime;
+        this.readSimTime = readSimTime;
+    }
 
     @Override
     public void execute() {
         try {
             ExecutorService executor = Executors.newFixedThreadPool(2);
             executor.submit(fillerRunnable);
-            Thread.sleep(500);
+            Thread.sleep(fillerHeadsUp);
             executor.submit(writerRunnable);
             executor.shutdown();
             executor.awaitTermination(1, TimeUnit.MINUTES);
@@ -37,7 +52,7 @@ public class OptimisticLock implements ConsoleExample {
         long stamp = lock.writeLock();
         try {
             System.out.println("WRITER -> write start");
-            long maxTime = TimeUnit.NANOSECONDS.convert(1000,TimeUnit.MILLISECONDS);
+            long maxTime = TimeUnit.NANOSECONDS.convert(writeSimTime,TimeUnit.MILLISECONDS);
             long endTime = System.nanoTime() + maxTime;
             for (long currentTime = 0; currentTime < endTime; currentTime = System.nanoTime()) {
                 sourceValue++;
@@ -58,7 +73,7 @@ public class OptimisticLock implements ConsoleExample {
         try {
             for (int i = 0; i < readTries; i++) {
                 System.out.println("FILLER -> optimistic lock valid? " + lock.validate(stamp));
-                Thread.sleep(1000);
+                Thread.sleep(readSimTime);
             }
             stamp = lock.readLock();
             if (sourceValue < destinationValue) {

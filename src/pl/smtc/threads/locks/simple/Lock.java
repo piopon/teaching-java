@@ -14,4 +14,8 @@ public class Lock {
         isLocked = false;
         notify();
     }
+
+    public boolean isLocked() {
+        return isLocked;
+    }
 }

@@ -1,7 +1,7 @@
 package pl.smtc.threads.locks.reentrant;
 
 public class IncrementValue {
-    private int startValue = 0;
+    private int startValue;
 
     public IncrementValue() {
         this.startValue = 0;

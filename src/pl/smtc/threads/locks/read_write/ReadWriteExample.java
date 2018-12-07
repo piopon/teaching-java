@@ -11,6 +11,19 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReadWriteExample implements ConsoleExample {
+    private int writerWaitTime;
+    private int readerWaitTime;
+
+    public ReadWriteExample() {
+        this.readerWaitTime = 100;
+        this.writerWaitTime = 1000;
+    }
+
+    public ReadWriteExample(int readerWaitTime, int writerWaitTime) {
+        this.readerWaitTime = readerWaitTime;
+        this.writerWaitTime = writerWaitTime;
+    }
+
     @Override
     public void execute() {
         Map<String, String> map = new HashMap<>();
@@ -18,10 +31,10 @@ public class ReadWriteExample implements ConsoleExample {
         try {
             ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-            executorService.submit(new MapWriter(1, lock, map, 1000));
+            executorService.submit(new MapWriter(1, lock, map, writerWaitTime));
             Thread.sleep(100);
-            executorService.submit(new MapReader(1, lock, map, 100));
-            executorService.submit(new MapReader(2, lock, map, 100));
+            executorService.submit(new MapReader(1, lock, map, readerWaitTime));
+            executorService.submit(new MapReader(2, lock, map, readerWaitTime));
 
             executorService.shutdown();
             executorService.awaitTermination(1, TimeUnit.MINUTES);

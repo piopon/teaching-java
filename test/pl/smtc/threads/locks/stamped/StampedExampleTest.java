@@ -10,7 +10,7 @@ class StampedExampleTest extends BaseTestOut {
 
     @Override
     protected void setUp() {
-        stampedExample = new StampedExample();
+        stampedExample = new StampedExample(100,10);
     }
 
     @Test

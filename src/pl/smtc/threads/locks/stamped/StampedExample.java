@@ -10,6 +10,20 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.StampedLock;
 
 public class StampedExample implements ConsoleExample {
+    private int writerWaitTime;
+    private int readerWaitTime;
+
+    public StampedExample() {
+        this.writerWaitTime = 1000;
+        this.readerWaitTime = 100;
+    }
+
+    public StampedExample(int writerWaitTime, int readerWaitTime) {
+        this.writerWaitTime = writerWaitTime;
+        this.readerWaitTime = readerWaitTime;
+    }
+
+
     @Override
     public void execute() {
         Map<Integer, Integer> map = new HashMap<>();
@@ -17,10 +31,10 @@ public class StampedExample implements ConsoleExample {
         try {
             ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-            executorService.submit(new MapWriter(1, lock, map, 1000));
+            executorService.submit(new MapWriter(1, lock, map, writerWaitTime));
             Thread.sleep(100);
-            executorService.submit(new MapReader(1, lock, map, 100));
-            executorService.submit(new MapReader(2, lock, map, 100));
+            executorService.submit(new MapReader(1, lock, map, readerWaitTime));
+            executorService.submit(new MapReader(2, lock, map, readerWaitTime));
 
             executorService.shutdown();
             executorService.awaitTermination(1, TimeUnit.MINUTES);

@@ -1,4 +1,4 @@
-package pl.smtc.recursion.sort;
+package pl.smtc.algorithms.sort.quick;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

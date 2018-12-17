@@ -25,7 +25,6 @@ class RecursionExamplesTest extends BaseTestInOut {
         assertTrue(output.contains("5) Raise number to power"));
         assertTrue(output.contains("6) Linked list"));
         assertTrue(output.contains("7) Directory explorer"));
-        assertTrue(output.contains("8) Quick sort"));
     }
 
     @Test

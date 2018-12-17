@@ -24,8 +24,9 @@ class BubbleSortTest extends BaseTestOut {
     void executeShouldInvokeBubbleSortExample() {
         bubbleSort.execute();
         String output = getOutput();
-        assertTrue(output.contains("TO SORT: [10, -9, 1, 0, -1, 4, 3, -3, 2, 1]"));
-        assertTrue(output.contains("SORTED: [-9, -3, -1, 0, 1, 1, 2, 3, 4, 10]"));
+        assertTrue(output.contains("TO SORT: [10, -9, 1, 0, -1, 4, 3, -3, 1, 2]"));
+        assertTrue(output.contains("NORMAL = [-9, -3, -1, 0, 1, 1, 2, 3, 4, 10] -> 10 scans"));
+        assertTrue(output.contains("FAST   = [-9, -3, -1, 0, 1, 1, 2, 3, 4, 10] -> 6 scans"));
     }
 
     @Test

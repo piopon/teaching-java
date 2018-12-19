@@ -3,6 +3,7 @@ package pl.smtc.algorithms.sort;
 import pl.smtc.algorithms.sort.bubble.BubbleSort;
 import pl.smtc.algorithms.sort.insertion.InsertionSort;
 import pl.smtc.algorithms.sort.quick.QuickSort;
+import pl.smtc.algorithms.sort.selection.SelectionSort;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 
@@ -15,7 +16,7 @@ public class SortAlgorithms implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new BubbleSort(), new InsertionSort(), new QuickSort());
+        addExamples(new BubbleSort(), new InsertionSort(), new QuickSort(), new SelectionSort());
 
         ConsoleMenu sortAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, sortAlgorithms);
         sortAlgorithmsMenu.show();

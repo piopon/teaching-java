@@ -40,6 +40,12 @@ class BubbleSortTest extends BaseTestOut {
         assertEquals(sorted, bubbleSort.sort(toSort));
     }
 
+    @ParameterizedTest(name = "Bubble sorted (optimized) array: {1}")
+    @MethodSource("sortTestData")
+    void sortFastShouldCorrectlySortInputTable(List<Integer> toSort, List<Integer> sorted) {
+        assertEquals(sorted, bubbleSort.sort(toSort));
+    }
+
     private static Stream<Arguments> sortTestData() {
         return Stream.of(
             Arguments.of(Arrays.asList(1, 1, 1, 1, 1, 1), Arrays.asList(1, 1, 1, 1, 1, 1)),

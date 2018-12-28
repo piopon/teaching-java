@@ -33,7 +33,7 @@ class SelectionSortTest extends BaseTestOut {
         assertEquals("Selection sort", selectionSort.getName());
     }
 
-    @ParameterizedTest(name = "Insertion sorted array: {1}")
+    @ParameterizedTest(name = "Selection sorted array: {1}")
     @MethodSource("sortTestData")
     void sortShouldCorrectlySortInputTable(List<Integer> toSort, List<Integer> sorted) {
         assertEquals(sorted, selectionSort.sort(toSort));

@@ -33,7 +33,7 @@ class MergeSortTest extends BaseTestOut {
         assertEquals("Merge sort", mergeSort.getName());
     }
 
-    @ParameterizedTest(name = "Insertion sorted array: {1}")
+    @ParameterizedTest(name = "Merge sorted array: {1}")
     @MethodSource("sortTestData")
     void sortShouldCorrectlySortInputTable(List<Integer> toSort, List<Integer> sorted) {
         assertEquals(sorted, mergeSort.sort(toSort));

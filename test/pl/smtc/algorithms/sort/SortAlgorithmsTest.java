@@ -25,6 +25,8 @@ class SortAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("3) Quick sort"));
         assertTrue(output.contains("4) Selection sort"));
         assertTrue(output.contains("5) Merge sort"));
+        assertTrue(output.contains("6) Heap sort"));
+        assertTrue(output.contains("7) Counting sort "));
     }
 
     @Test

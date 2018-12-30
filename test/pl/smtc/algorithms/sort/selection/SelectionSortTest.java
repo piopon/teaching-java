@@ -21,7 +21,7 @@ class SelectionSortTest extends BaseTestOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldInvokeSelectionSortExample() {
         selectionSort.execute();
         String output = getOutput();
         assertTrue(output.contains("TO SORT: [10, -9, 1, 0, -1, 4, 3, -3, 1, 2]"));
@@ -29,7 +29,7 @@ class SelectionSortTest extends BaseTestOut {
     }
 
     @Test
-    void getName() {
+    void getNameShouldReturnSelectionSortString() {
         assertEquals("Selection sort", selectionSort.getName());
     }
 

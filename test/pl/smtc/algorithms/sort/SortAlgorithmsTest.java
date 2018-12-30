@@ -28,12 +28,11 @@ class SortAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("6) Heap sort"));
         assertTrue(output.contains("7) Counting sort"));
         assertTrue(output.contains("8) Shell sort"));
+        assertTrue(output.contains("9) Comb sort"));
     }
 
     @Test
     void getNameShouldReturnSortAlgorithmsString() {
         assertEquals("Sort algorithms", sortAlgorithms.getName());
     }
-
-
 }

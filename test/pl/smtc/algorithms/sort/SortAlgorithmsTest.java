@@ -30,6 +30,7 @@ class SortAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("8) Shell sort"));
         assertTrue(output.contains("9) Comb sort"));
         assertTrue(output.contains("10) Cocktail sort"));
+        assertTrue(output.contains("11) Gnome sort"));
     }
 
     @Test

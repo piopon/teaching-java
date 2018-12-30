@@ -4,6 +4,7 @@ import pl.smtc.algorithms.sort.bubble.BubbleSort;
 import pl.smtc.algorithms.sort.cocktail.CocktailSort;
 import pl.smtc.algorithms.sort.comb.CombSort;
 import pl.smtc.algorithms.sort.counting.CountingSort;
+import pl.smtc.algorithms.sort.gnome.GnomeSort;
 import pl.smtc.algorithms.sort.heap.HeapSort;
 import pl.smtc.algorithms.sort.insertion.InsertionSort;
 import pl.smtc.algorithms.sort.merge.MergeSort;
@@ -24,7 +25,7 @@ public class SortAlgorithms implements ConsoleExample {
     public void execute() {
         addExamples(new BubbleSort(), new InsertionSort(), new QuickSort(), new SelectionSort(),
                     new MergeSort(), new HeapSort(), new CountingSort(), new ShellSort(),
-                    new CombSort(), new CocktailSort());
+                    new CombSort(), new CocktailSort(), new GnomeSort());
 
         ConsoleMenu sortAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, sortAlgorithms);
         sortAlgorithmsMenu.show();

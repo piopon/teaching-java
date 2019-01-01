@@ -32,6 +32,7 @@ class SortAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("10) Cocktail sort"));
         assertTrue(output.contains("11) Gnome sort"));
         assertTrue(output.contains("12) Radix sort"));
+        assertTrue(output.contains("13) Bitonic sort"));
     }
 
     @Test

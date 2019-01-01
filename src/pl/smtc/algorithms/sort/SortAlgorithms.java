@@ -1,5 +1,6 @@
 package pl.smtc.algorithms.sort;
 
+import pl.smtc.algorithms.sort.bitonic.BitonicSort;
 import pl.smtc.algorithms.sort.bubble.BubbleSort;
 import pl.smtc.algorithms.sort.cocktail.CocktailSort;
 import pl.smtc.algorithms.sort.comb.CombSort;
@@ -26,7 +27,8 @@ public class SortAlgorithms implements ConsoleExample {
     public void execute() {
         addExamples(new BubbleSort(), new InsertionSort(), new QuickSort(), new SelectionSort(),
                     new MergeSort(), new HeapSort(), new CountingSort(), new ShellSort(),
-                    new CombSort(), new CocktailSort(), new GnomeSort(), new RadixSort());
+                    new CombSort(), new CocktailSort(), new GnomeSort(), new RadixSort(),
+                    new BitonicSort());
 
         ConsoleMenu sortAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, sortAlgorithms);
         sortAlgorithmsMenu.show();

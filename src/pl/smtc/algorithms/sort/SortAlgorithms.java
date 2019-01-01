@@ -9,6 +9,7 @@ import pl.smtc.algorithms.sort.heap.HeapSort;
 import pl.smtc.algorithms.sort.insertion.InsertionSort;
 import pl.smtc.algorithms.sort.merge.MergeSort;
 import pl.smtc.algorithms.sort.quick.QuickSort;
+import pl.smtc.algorithms.sort.radix.RadixSort;
 import pl.smtc.algorithms.sort.selection.SelectionSort;
 import pl.smtc.algorithms.sort.shell.ShellSort;
 import pl.smtc.menu.ConsoleExample;
@@ -25,7 +26,7 @@ public class SortAlgorithms implements ConsoleExample {
     public void execute() {
         addExamples(new BubbleSort(), new InsertionSort(), new QuickSort(), new SelectionSort(),
                     new MergeSort(), new HeapSort(), new CountingSort(), new ShellSort(),
-                    new CombSort(), new CocktailSort(), new GnomeSort());
+                    new CombSort(), new CocktailSort(), new GnomeSort(), new RadixSort());
 
         ConsoleMenu sortAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, sortAlgorithms);
         sortAlgorithmsMenu.show();

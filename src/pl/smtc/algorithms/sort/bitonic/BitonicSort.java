@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.bitonic;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BitonicSort implements ConsoleExample {
+public class BitonicSort implements ConsoleExample, SortExample {
     private enum Direction {
         ASCEND,
         DESCEND

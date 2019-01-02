@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.counting;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CountingSort implements ConsoleExample {
+public class CountingSort implements ConsoleExample, SortExample {
 
     @Override
     public void execute() {

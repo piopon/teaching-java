@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.comb;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CombSort implements ConsoleExample {
+public class CombSort implements ConsoleExample, SortExample {
     private static double SHRINK_FACTOR = 1.3;
 
     @Override

@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.shell;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ShellSort implements ConsoleExample {
+public class ShellSort implements ConsoleExample, SortExample {
 
     @Override
     public void execute() {

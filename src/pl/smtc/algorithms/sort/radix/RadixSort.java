@@ -1,18 +1,18 @@
 package pl.smtc.algorithms.sort.radix;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class RadixSort implements ConsoleExample {
+public class RadixSort implements ConsoleExample, SortExample {
     private static final int BYTE_MASK = 0b1111_1111;
     private static final int BYTE_MAX = 256;
 
     @Override
     public void execute() {
-
         List<Integer> toSort = Arrays.asList(10, -9, 1, 0, -1, 4, 3, -3, 1, 2);
         System.out.println("TO SORT: " + toSort);
         System.out.println("SORTED:  " + sort(toSort));

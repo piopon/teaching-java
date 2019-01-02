@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.cocktail;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CocktailSort implements ConsoleExample {
+public class CocktailSort implements ConsoleExample, SortExample {
 
     @Override
     public void execute() {

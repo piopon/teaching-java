@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.bubble;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BubbleSort implements ConsoleExample {
+public class BubbleSort implements ConsoleExample, SortExample {
     private int scansCounter;
 
     @Override

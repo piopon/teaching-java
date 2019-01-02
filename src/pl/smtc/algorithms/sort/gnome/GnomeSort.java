@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.gnome;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class GnomeSort implements ConsoleExample {
+public class GnomeSort implements ConsoleExample, SortExample {
 
     @Override
     public void execute() {

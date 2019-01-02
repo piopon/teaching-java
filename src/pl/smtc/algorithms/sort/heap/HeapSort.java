@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.heap;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class HeapSort implements ConsoleExample {
+public class HeapSort implements ConsoleExample, SortExample {
 
     @Override
     public void execute() {

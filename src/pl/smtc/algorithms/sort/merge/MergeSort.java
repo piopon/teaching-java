@@ -1,12 +1,13 @@
 package pl.smtc.algorithms.sort.merge;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MergeSort implements ConsoleExample {
+public class MergeSort implements ConsoleExample, SortExample {
 
     @Override
     public void execute() {

@@ -1,17 +1,19 @@
 package pl.smtc.algorithms.sort.quick;
 
+import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.menu.ConsoleExample;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class QuickSort implements ConsoleExample {
+public class QuickSort implements ConsoleExample, SortExample {
     
     @Override
     public void execute() {
-        int[] input = {23, 31, 1, 21, 36, 72, 100, -10, 0, 23};
-        System.out.println("TO SORT: " + Arrays.toString(input));
-        int[] sorted = sort(input, 0, input.length - 1);
-        System.out.println("RESULT:  " + Arrays.toString(sorted));
+        List<Integer> toSort = Arrays.asList(10, -9, 1, 0, -1, 4, 3, -3, 1, 2);
+        System.out.println("TO SORT: " + toSort);
+        System.out.println("SORTED:  " + sort(toSort));
     }
 
     @Override
@@ -19,31 +21,36 @@ public class QuickSort implements ConsoleExample {
         return "Quick sort";
     }
 
-    public int[] sort(int[] array, int start, int end) {
-        int[] output = array;
-        int idx = partition(array, start, end);
-        if (start < idx - 1) {
-            output = sort(array, start, idx - 1);
-        }
-        if (end > idx) {
-            output = sort(array, idx, end);
-        }
-        return output;
+    public List<Integer> sort(final List<Integer> input) {
+        List<Integer> result = new ArrayList<>(input);
+        sort(result, 0, result.size() - 1);
+
+        return result;
     }
 
-    private int partition(int[] array, int left, int right) {
-        int pivot = array[left];
+    private void sort(final List<Integer> list, int start, int end) {
+        int idx = partition(list, start, end);
+        if (start < idx - 1) {
+            sort(list, start, idx - 1);
+        }
+        if (end > idx) {
+            sort(list, idx, end);
+        }
+    }
+
+    private int partition(final List<Integer> list, int left, int right) {
+        int pivot = list.get(left);
         while (left <= right) {
-            while (array[left] < pivot) {
+            while (list.get(left) < pivot) {
                 left++;
             }
-            while (array[right] > pivot) {
+            while (list.get(right) > pivot) {
                 right--;
             }
             if (left <= right) {
-                int tmp = array[left];
-                array[left] = array[right];
-                array[right] = tmp;
+                int tmp = list.get(left);
+                list.set(left, list.get(right));
+                list.set(right, tmp);
                 left++;
                 right--;
             }

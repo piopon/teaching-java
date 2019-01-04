@@ -23,6 +23,11 @@ public class GnomeSort implements ConsoleExample, SortExample {
 
     public List<Integer> sort(final List<Integer> input) {
         List<Integer> result = new ArrayList<>(input);
+
+        if(result.size() == 1) {
+            return result;
+        }
+
         int index = 0;
         while (index < result.size()) {
             if (index == 0) {

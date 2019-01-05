@@ -21,6 +21,7 @@ class SearchAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("SEARCH ALGORITHMS"));
         assertTrue(output.contains("1) Linear search"));
         assertTrue(output.contains("2) Binary search"));
+        assertTrue(output.contains("3) Jump search"));
     }
 
     @Test

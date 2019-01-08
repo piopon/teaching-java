@@ -24,6 +24,7 @@ class SearchAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("3) Jump search"));
         assertTrue(output.contains("4) Interpolation search"));
         assertTrue(output.contains("5) Exponential search"));
+        assertTrue(output.contains("6) Fibonacci search"));
     }
 
     @Test

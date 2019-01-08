@@ -2,6 +2,7 @@ package pl.smtc.algorithms.search;
 
 import pl.smtc.algorithms.search.binary.BinarySearch;
 import pl.smtc.algorithms.search.exponential.ExponentialSearch;
+import pl.smtc.algorithms.search.fibonacci.FibonacciSearch;
 import pl.smtc.algorithms.search.interpolation.InterpolationSearch;
 import pl.smtc.algorithms.search.jump.JumpSearch;
 import pl.smtc.algorithms.search.linear.LinearSearch;
@@ -18,7 +19,7 @@ public class SearchAlgorithms implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new LinearSearch(), new BinarySearch(), new JumpSearch(),
-                    new InterpolationSearch(), new ExponentialSearch());
+                    new InterpolationSearch(), new ExponentialSearch(), new FibonacciSearch());
 
         ConsoleMenu searchAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, searchAlgorithms);
         searchAlgorithmsMenu.show();

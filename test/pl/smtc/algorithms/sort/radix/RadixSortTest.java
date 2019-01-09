@@ -41,6 +41,11 @@ class RadixSortTest extends BaseTestOut {
 
     private static Stream<Arguments> sortTestData() {
         return Stream.of(
+                Arguments.of(Arrays.asList(17), Arrays.asList(17)),
+                Arguments.of(Arrays.asList(6, 66), Arrays.asList(6, 66)),
+                Arguments.of(Arrays.asList(2, 1), Arrays.asList(1, 2)),
+                Arguments.of(Arrays.asList(-12, 0, -11), Arrays.asList(-12, -11, 0)),
+                Arguments.of(Arrays.asList(-122, -1, 34), Arrays.asList(-122, -1, 34)),
                 Arguments.of(Arrays.asList(1, 1, 1, 1, 1, 1), Arrays.asList(1, 1, 1, 1, 1, 1)),
                 Arguments.of(Arrays.asList(-37, 22, -11, -27, 0), Arrays.asList(-37, -27, -11, 0, 22)),
                 Arguments.of(Arrays.asList(30, 41, 52, 63, 74), Arrays.asList(30, 41, 52, 63, 74)),

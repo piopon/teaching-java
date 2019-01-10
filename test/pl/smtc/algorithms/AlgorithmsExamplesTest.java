@@ -7,7 +7,7 @@ import pl.smtc.base.BaseTestOut;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AlgorithmsExamplesTest extends BaseTestInOut {
-    AlgorithmsExamples algorithmsExamples;
+    private AlgorithmsExamples algorithmsExamples;
 
     @Override
     protected void setUp() {
@@ -22,6 +22,7 @@ class AlgorithmsExamplesTest extends BaseTestInOut {
         assertTrue(output.contains("ALGORITHM EXAMPLES"));
         assertTrue(output.contains("1) Sort algorithms"));
         assertTrue(output.contains("2) Search algorithms"));
+        assertTrue(output.contains("3) Math algorithms"));
     }
 
     @Test

@@ -1,5 +1,6 @@
 package pl.smtc.algorithms;
 
+import pl.smtc.algorithms.math.MathAlgorithms;
 import pl.smtc.algorithms.search.SearchAlgorithms;
 import pl.smtc.algorithms.sort.SortAlgorithms;
 import pl.smtc.menu.ConsoleExample;
@@ -14,7 +15,7 @@ public class AlgorithmsExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new SortAlgorithms(), new SearchAlgorithms());
+        addExamples(new SortAlgorithms(), new SearchAlgorithms(), new MathAlgorithms());
 
         ConsoleMenu algorithmsMenu = new ConsoleMenu(getName(), menuWidth, algorithmExamples);
         algorithmsMenu.show();

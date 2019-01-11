@@ -20,7 +20,8 @@ class MathAlgorithmsTest extends BaseTestInOut {
         mathAlgorithms.execute();
         String output = getOutput();
         assertTrue(output.contains("MATH ALGORITHMS"));
-        assertTrue(output.contains("1) Eratosthenes sieve"));
+        assertTrue(output.contains("1) Binomial coefficient"));
+        assertTrue(output.contains("2) Eratosthenes sieve"));
     }
 
     @Test

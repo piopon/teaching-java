@@ -1,6 +1,7 @@
 package pl.smtc.algorithms.math;
 
 import pl.smtc.algorithms.math.binomial.BinomialCoefficient;
+import pl.smtc.algorithms.math.catalan.CatalanNumbers;
 import pl.smtc.algorithms.math.sieve.EratosthenesSieve;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
@@ -14,7 +15,7 @@ public class MathAlgorithms implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new BinomialCoefficient(), new EratosthenesSieve());
+        addExamples(new BinomialCoefficient(), new EratosthenesSieve(), new CatalanNumbers());
 
         ConsoleMenu mathAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, mathAlgorithms);
         mathAlgorithmsMenu.show();

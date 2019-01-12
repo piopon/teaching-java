@@ -1,4 +1,4 @@
-package pl.smtc.algorithms.math.sieve;
+package pl.smtc.algorithms.math.primes.sieve;
 
 import pl.smtc.menu.ConsoleExample;
 

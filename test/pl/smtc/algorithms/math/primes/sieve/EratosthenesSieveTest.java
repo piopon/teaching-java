@@ -1,11 +1,10 @@
-package pl.smtc.algorithms.math.sieve;
+package pl.smtc.algorithms.math.primes.sieve;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import pl.smtc.base.BaseTestInOut;
-import pl.smtc.base.BaseTestOut;
 
 import java.util.Arrays;
 import java.util.List;

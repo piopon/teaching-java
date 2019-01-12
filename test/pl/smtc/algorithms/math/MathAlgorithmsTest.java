@@ -2,7 +2,6 @@ package pl.smtc.algorithms.math;
 
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestInOut;
-import pl.smtc.base.BaseTestOut;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,8 +19,8 @@ class MathAlgorithmsTest extends BaseTestInOut {
         mathAlgorithms.execute();
         String output = getOutput();
         assertTrue(output.contains("MATH ALGORITHMS"));
-        assertTrue(output.contains("1) Binomial coefficient"));
-        assertTrue(output.contains("2) Eratosthenes sieve"));
+        assertTrue(output.contains("1) Prime numbers"));
+        assertTrue(output.contains("2) Binomial coefficient"));
         assertTrue(output.contains("3) Catalan numbers"));
     }
 

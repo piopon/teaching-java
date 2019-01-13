@@ -1,5 +1,6 @@
 package pl.smtc.algorithms.math.primes;
 
+import pl.smtc.algorithms.math.primes.factor.PrimeFactors;
 import pl.smtc.algorithms.math.primes.sieve.EratosthenesSieve;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
@@ -13,7 +14,7 @@ public class PrimeNumbers implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new EratosthenesSieve());
+        addExamples(new PrimeFactors(), new EratosthenesSieve());
 
         ConsoleMenu primeNumbersMenu = new ConsoleMenu(getName(), menuWidth, primeNumbersAlgorithms);
         primeNumbersMenu.show();

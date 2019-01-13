@@ -19,7 +19,8 @@ class PrimeNumbersTest extends BaseTestInOut {
         primeNumbers.execute();
         String output = getOutput();
         assertTrue(output.contains("PRIME NUMBERS"));
-        assertTrue(output.contains("1) Eratosthenes sieve"));
+        assertTrue(output.contains("1) Prime factors"));
+        assertTrue(output.contains("2) Eratosthenes sieve"));
     }
 
     @Test

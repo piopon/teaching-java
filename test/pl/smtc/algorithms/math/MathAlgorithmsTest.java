@@ -21,7 +21,9 @@ class MathAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("MATH ALGORITHMS"));
         assertTrue(output.contains("1) Prime numbers"));
         assertTrue(output.contains("2) Binomial coefficient"));
-        assertTrue(output.contains("3) Catalan numbers"));
+        assertTrue(output.contains("3) Sum of all digits"));
+        assertTrue(output.contains("4) Catalan numbers"));
+        assertTrue(output.contains("5) Hoax numbers"));
     }
 
     @Test

@@ -7,6 +7,7 @@ import pl.smtc.algorithms.math.hoax.HoaxNumbers;
 import pl.smtc.algorithms.math.multiplier.LeastCommonMultiple;
 import pl.smtc.algorithms.math.primes.PrimeNumbers;
 import pl.smtc.algorithms.math.sphenic.SphenicNumbers;
+import pl.smtc.algorithms.math.totient.EulerTotient;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 
@@ -21,7 +22,7 @@ public class MathAlgorithms implements ConsoleExample {
     public void execute() {
         addExamples(new PrimeNumbers(), new LeastCommonMultiple(), new DigitsSum(),
                     new BinomialCoefficient(), new CatalanNumbers(), new HoaxNumbers(),
-                    new SphenicNumbers());
+                    new SphenicNumbers(), new EulerTotient());
 
         ConsoleMenu mathAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, mathAlgorithms);
         mathAlgorithmsMenu.show();

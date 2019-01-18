@@ -26,6 +26,7 @@ class MathAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("5) Catalan numbers"));
         assertTrue(output.contains("6) Hoax numbers"));
         assertTrue(output.contains("7) Sphenic numbers"));
+        assertTrue(output.contains("8) Euler totient function"));
     }
 
     @Test

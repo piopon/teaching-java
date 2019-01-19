@@ -1,6 +1,7 @@
 package pl.smtc.algorithms.math;
 
 import pl.smtc.algorithms.math.binomial.BinomialCoefficient;
+import pl.smtc.algorithms.math.bits.BitsAlgorithms;
 import pl.smtc.algorithms.math.catalan.CatalanNumbers;
 import pl.smtc.algorithms.math.digits.DigitsSum;
 import pl.smtc.algorithms.math.hoax.HoaxNumbers;
@@ -20,9 +21,9 @@ public class MathAlgorithms implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new PrimeNumbers(), new LeastCommonMultiple(), new DigitsSum(),
-                    new BinomialCoefficient(), new CatalanNumbers(), new HoaxNumbers(),
-                    new SphenicNumbers(), new EulerTotient());
+        addExamples(new PrimeNumbers(), new BitsAlgorithms(), new LeastCommonMultiple(),
+                    new DigitsSum(), new BinomialCoefficient(), new CatalanNumbers(),
+                    new HoaxNumbers(), new SphenicNumbers(), new EulerTotient());
 
         ConsoleMenu mathAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, mathAlgorithms);
         mathAlgorithmsMenu.show();

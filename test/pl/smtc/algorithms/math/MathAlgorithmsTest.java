@@ -20,13 +20,14 @@ class MathAlgorithmsTest extends BaseTestInOut {
         String output = getOutput();
         assertTrue(output.contains("MATH ALGORITHMS"));
         assertTrue(output.contains("1) Prime numbers"));
-        assertTrue(output.contains("2) Least common multiplier"));
-        assertTrue(output.contains("3) Sum of all digits"));
-        assertTrue(output.contains("4) Binomial coefficient"));
-        assertTrue(output.contains("5) Catalan numbers"));
-        assertTrue(output.contains("6) Hoax numbers"));
-        assertTrue(output.contains("7) Sphenic numbers"));
-        assertTrue(output.contains("8) Euler totient function"));
+        assertTrue(output.contains("2) Bits algorithms"));
+        assertTrue(output.contains("3) Least common multiplier"));
+        assertTrue(output.contains("4) Sum of all digits"));
+        assertTrue(output.contains("5) Binomial coefficient"));
+        assertTrue(output.contains("6) Catalan numbers"));
+        assertTrue(output.contains("7) Hoax numbers"));
+        assertTrue(output.contains("8) Sphenic numbers"));
+        assertTrue(output.contains("9) Euler totient function"));
     }
 
     @Test

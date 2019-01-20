@@ -1,5 +1,6 @@
 package pl.smtc.algorithms.math.bits;
 
+import pl.smtc.algorithms.math.bits.increment.BitIncrementer;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 
@@ -12,7 +13,7 @@ public class BitsAlgorithms implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples();
+        addExamples(new BitIncrementer());
 
         ConsoleMenu bitsAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, bitsAlgorithms);
         bitsAlgorithmsMenu.show();

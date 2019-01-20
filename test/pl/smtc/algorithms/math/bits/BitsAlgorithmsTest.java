@@ -18,12 +18,11 @@ class BitsAlgorithmsTest extends BaseTestInOut {
         simulateUserInput("0" + System.lineSeparator());
         bitsAlgorithms.execute();
         String output = getOutput();
+        assertTrue(output.contains("1) Bit incrementer"));
     }
 
     @Test
     void getNameShouldReturnBitsAlgorithmsString() {
         assertEquals("Bits algorithms", bitsAlgorithms.getName());
     }
-
-
 }

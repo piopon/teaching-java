@@ -19,6 +19,7 @@ class BitsAlgorithmsTest extends BaseTestInOut {
         bitsAlgorithms.execute();
         String output = getOutput();
         assertTrue(output.contains("1) Bit incrementer"));
+        assertTrue(output.contains("2) Check opposite signs"));
     }
 
     @Test

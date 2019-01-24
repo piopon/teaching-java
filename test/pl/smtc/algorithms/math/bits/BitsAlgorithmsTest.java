@@ -21,6 +21,7 @@ class BitsAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("1) Bit incrementer"));
         assertTrue(output.contains("2) Check opposite signs"));
         assertTrue(output.contains("3) Gray code generator"));
+        assertTrue(output.contains("4) Format converter"));
     }
 
     @Test

@@ -29,7 +29,6 @@ class BitsSwitcherTest extends BaseTestInOut {
         assertTrue(output.contains("11001000 [BIN] <-> 200 [DEC]"));
         assertTrue(output.contains("11101000 [BIN] <-> 232 [DEC]"));
         assertTrue(output.contains("11100000 [BIN] <-> 224 [DEC]"));
-
     }
 
     @Test

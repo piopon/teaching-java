@@ -23,6 +23,7 @@ class BitsAlgorithmsTest extends BaseTestInOut {
         assertTrue(output.contains("3) Gray code generator"));
         assertTrue(output.contains("4) Format converter"));
         assertTrue(output.contains("5) Bits switcher"));
+        assertTrue(output.contains("6) Bit subtract"));
     }
 
     @Test

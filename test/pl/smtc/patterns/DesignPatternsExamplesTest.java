@@ -19,6 +19,7 @@ class DesignPatternsExamplesTest extends BaseTestInOut {
         designPatterns.execute();
         String output = getOutput();
         assertTrue(output.contains("DESIGN PATTERNS"));
+        assertTrue(output.contains("1) Behavioral patterns"));
     }
 
     @Test

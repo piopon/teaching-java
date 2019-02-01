@@ -1,5 +1,6 @@
 package pl.smtc.algorithms.math.bits;
 
+import pl.smtc.algorithms.math.bits.add.BitAdd;
 import pl.smtc.algorithms.math.bits.gray.GrayCode;
 import pl.smtc.algorithms.math.bits.increment.BitIncrementer;
 import pl.smtc.algorithms.math.bits.opposite.OppositeSigns;
@@ -19,7 +20,8 @@ public class BitsAlgorithms implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new BitIncrementer(), new OppositeSigns(), new GrayCode(),
-                    new FormatConverter(), new BitsSwitcher(), new BitSubtract());
+                    new FormatConverter(), new BitsSwitcher(), new BitAdd(),
+                    new BitSubtract());
 
         ConsoleMenu bitsAlgorithmsMenu = new ConsoleMenu(getName(), menuWidth, bitsAlgorithms);
         bitsAlgorithmsMenu.show();

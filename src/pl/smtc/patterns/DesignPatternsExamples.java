@@ -4,6 +4,7 @@ import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.patterns.behavioral.BehavioralPatterns;
 import pl.smtc.patterns.creational.CreationalPatterns;
+import pl.smtc.patterns.structural.StructuralPatterns;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +15,7 @@ public class DesignPatternsExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new CreationalPatterns(), new BehavioralPatterns());
+        addExamples(new CreationalPatterns(), new StructuralPatterns(), new BehavioralPatterns());
 
         ConsoleMenu patternsMenu = new ConsoleMenu(getName(), menuWidth, patternsExamples);
         patternsMenu.show();

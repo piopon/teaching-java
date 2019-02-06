@@ -19,6 +19,7 @@ class BehavioralPatternsTest extends BaseTestInOut {
         behavioralPatterns.execute();
         String output = getOutput();
         assertTrue(output.contains("BEHAVIORAL PATTERNS"));
+        assertTrue(output.contains("1) Command pattern"));
     }
 
     @Test

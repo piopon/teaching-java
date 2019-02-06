@@ -2,6 +2,7 @@ package pl.smtc.patterns.behavioral;
 
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.patterns.behavioral.command.CommandPattern;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ public class BehavioralPatterns implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples();
+        addExamples(new CommandPattern());
 
         ConsoleMenu behavioralMenu = new ConsoleMenu(getName(), menuWidth, behavioralExamples);
         behavioralMenu.show();

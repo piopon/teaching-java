@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommandManager {
-    private List<ICommand> history = new ArrayList<>();
-    private int lastCommand = -1;
+    protected List<ICommand> history = new ArrayList<>();
+    protected int lastCommand = -1;
 
     public void exe(ICommand command) {
         lastCommand++;

@@ -9,9 +9,9 @@ import java.util.Arrays;
 public class Robot {
     private String manufacturer;
     private String model;
-    private IMove linearMove = new NoMove();
-    private IMove jointMove = new NoMove();
-    private IMove circularMove = new NoMove();
+    protected IMove linearMove = new NoMove();
+    protected IMove jointMove = new NoMove();
+    protected IMove circularMove = new NoMove();
 
     public Robot(String manufacturer, String model) {
         this.manufacturer = manufacturer;

@@ -21,6 +21,7 @@ class BehavioralPatternsTest extends BaseTestInOut {
         assertTrue(output.contains("BEHAVIORAL PATTERNS"));
         assertTrue(output.contains("1) Command pattern"));
         assertTrue(output.contains("2) Strategy pattern"));
+        assertTrue(output.contains("3) Observer pattern"));
     }
 
     @Test

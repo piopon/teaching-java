@@ -1,8 +1,8 @@
 package pl.smtc.patterns.behavioral.observer.subject;
 
 public class WeatherStation extends WeatherObservable implements WeatherGauge {
-    private double temperature = 0;
-    private double windSpeed = 0;
+    protected double temperature = 0;
+    protected double windSpeed = 0;
 
     public void setTemperature(double temperature) {
         this.temperature = temperature;

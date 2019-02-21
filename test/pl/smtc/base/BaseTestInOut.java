@@ -6,6 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public abstract class BaseTestInOut {
     private static final ByteArrayOutputStream OUTPUT_STREAM = new ByteArrayOutputStream();
@@ -31,5 +34,14 @@ public abstract class BaseTestInOut {
 
     protected void simulateUserInput(String simInput) {
         System.setIn(new ByteArrayInputStream(simInput.getBytes()));
+    }
+
+    protected void simulateCommaInput(String commaInput) {
+        StringBuilder result = new StringBuilder();
+        List<String> list = new ArrayList<>(Arrays.asList(commaInput.split(",")));
+        for (String currentChar : list) {
+            result.append(currentChar.trim()).append(System.lineSeparator());
+        }
+        simulateUserInput(result.toString());
     }
 }

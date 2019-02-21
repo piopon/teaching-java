@@ -19,7 +19,7 @@ class BasicCommTest extends BaseTestInOut {
 
     @Test
     void executeShouldInvokeBasicCommunicationExample() {
-        simulateUserInput(convertToInput("S, H, Q"));
+        simulateCommaInput("S, H, Q");
         basicComm.execute();
         String output = getOutput();
         assertTrue(output.contains("> press Q to exit, S to show counter, H to hide it."));
@@ -31,14 +31,5 @@ class BasicCommTest extends BaseTestInOut {
     @Test
     void getNameShouldReturnVolatileVariableComm() {
         assertEquals("Volatile variable comm", basicComm.getName());
-    }
-
-    private String convertToInput(String commaSeparatedChars) {
-        StringBuilder result = new StringBuilder();
-        List<String> list = new ArrayList<String>(Arrays.asList(commaSeparatedChars.split(",")));
-        for (String currentChar : list) {
-            result.append(currentChar.trim() + System.lineSeparator());
-        }
-        return result.toString();
     }
 }

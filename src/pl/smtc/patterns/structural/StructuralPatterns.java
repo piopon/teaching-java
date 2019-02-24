@@ -2,6 +2,7 @@ package pl.smtc.patterns.structural;
 
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.patterns.structural.decorator.DecoratorPattern;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ public class StructuralPatterns implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples();
+        addExamples(new DecoratorPattern());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, structuralExamples);
         creationalMenu.show();

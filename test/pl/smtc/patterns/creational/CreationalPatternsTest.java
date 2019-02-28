@@ -19,6 +19,7 @@ class CreationalPatternsTest extends BaseTestInOut {
         creationalPatterns.execute();
         String output = getOutput();
         assertTrue(output.contains("CREATIONAL PATTERNS"));
+        assertTrue(output.contains("1) Simple factory"));
     }
 
     @Test

@@ -2,6 +2,7 @@ package pl.smtc.patterns.creational;
 
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.patterns.creational.SimpleFactory.SimpleFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ public class CreationalPatterns implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples();
+        addExamples(new SimpleFactory());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, creationalExamples);
         creationalMenu.show();

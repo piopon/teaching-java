@@ -67,7 +67,7 @@ class SimpleFactoryTest extends BaseTestInOut {
         assertEquals("Wall lamp description", result.get(0).getDescription());
     }
 
-    ILamp createLamp(Lamps type, String description) {
+    private ILamp createLamp(Lamps type, String description) {
         ILamp mockLamp = mock(ILamp.class);
         when(mockLamp.getType()).thenReturn(type);
         when(mockLamp.getDescription()).thenReturn(description);

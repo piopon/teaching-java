@@ -2,7 +2,7 @@ package pl.smtc.patterns.creational.AbstractFactory.product.source;
 
 public abstract class Source {
     protected ESource type = ESource.UNKNOWN;
-    protected int lightTemp;
+    private int lightTemp;
     private String glassShade = "";
 
     protected Source(int lightTemp) {

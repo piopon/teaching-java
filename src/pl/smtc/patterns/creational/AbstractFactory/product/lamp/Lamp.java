@@ -24,8 +24,8 @@ public abstract class Lamp {
     }
 
     public String getDescription() {
-        String mountDetails = "mount with: " + mounting.getDescription();
-        String sourceDetails = "light source: " + source.getDescription();
+        String mountDetails = "mount with: " + (mounting != null ? mounting.getDescription() : "error");
+        String sourceDetails = "light source: " + (source != null ? source.getDescription() : "error");
         String details = mountDetails + ", " + sourceDetails;
         return caseColor + " " + type + " LAMP [" + caseProtection + "] - " + details;
     }

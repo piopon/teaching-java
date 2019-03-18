@@ -2,6 +2,7 @@ package pl.smtc.patterns.creational;
 
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.patterns.creational.AbstractFactory.AbstractFactory;
 import pl.smtc.patterns.creational.FactoryMethod.FactoryMethod;
 import pl.smtc.patterns.creational.SimpleFactory.SimpleFactory;
 
@@ -14,7 +15,7 @@ public class CreationalPatterns implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new SimpleFactory(), new FactoryMethod());
+        addExamples(new SimpleFactory(), new FactoryMethod(), new AbstractFactory());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, creationalExamples);
         creationalMenu.show();

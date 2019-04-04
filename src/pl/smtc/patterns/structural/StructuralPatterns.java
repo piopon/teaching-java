@@ -2,7 +2,9 @@ package pl.smtc.patterns.structural;
 
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
+import pl.smtc.patterns.structural.adapter.AdapterPattern;
 import pl.smtc.patterns.structural.decorator.DecoratorPattern;
+import pl.smtc.patterns.structural.facade.FacadePattern;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +15,7 @@ public class StructuralPatterns implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new DecoratorPattern());
+        addExamples(new DecoratorPattern(), new AdapterPattern());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, structuralExamples);
         creationalMenu.show();

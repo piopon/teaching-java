@@ -21,6 +21,7 @@ class StructuralPatternsTest extends BaseTestInOut {
         String output = getOutput();
         assertTrue(output.contains("STRUCTURAL PATTERNS"));
         assertTrue(output.contains("1) Decorator pattern"));
+        assertTrue(output.contains("2) Adapter pattern"));
     }
 
     @Test

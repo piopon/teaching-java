@@ -15,7 +15,7 @@ public class StructuralPatterns implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new DecoratorPattern(), new AdapterPattern());
+        addExamples(new DecoratorPattern(), new AdapterPattern(), new FacadePattern());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, structuralExamples);
         creationalMenu.show();

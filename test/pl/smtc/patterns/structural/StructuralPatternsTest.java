@@ -24,6 +24,7 @@ class StructuralPatternsTest extends BaseTestInOut {
         assertTrue(output.contains("2) Adapter pattern"));
         assertTrue(output.contains("3) Facade pattern"));
         assertTrue(output.contains("4) Proxy pattern"));
+        assertTrue(output.contains("5) Bridge pattern"));
     }
 
     @Test

@@ -4,6 +4,7 @@ import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.patterns.structural.adapter.AdapterPattern;
 import pl.smtc.patterns.structural.bridge.BridgePattern;
+import pl.smtc.patterns.structural.composite.CompositePattern;
 import pl.smtc.patterns.structural.decorator.DecoratorPattern;
 import pl.smtc.patterns.structural.facade.FacadePattern;
 import pl.smtc.patterns.structural.proxy.ProxyPattern;
@@ -18,7 +19,7 @@ public class StructuralPatterns implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new DecoratorPattern(), new AdapterPattern(), new FacadePattern(),
-                    new ProxyPattern(), new BridgePattern());
+                    new ProxyPattern(), new BridgePattern(), new CompositePattern());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, structuralExamples);
         creationalMenu.show();

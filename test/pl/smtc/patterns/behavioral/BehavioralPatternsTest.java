@@ -24,6 +24,7 @@ class BehavioralPatternsTest extends BaseTestInOut {
         assertTrue(output.contains("3) Observer pattern"));
         assertTrue(output.contains("4) Template method pattern"));
         assertTrue(output.contains("5) Iterator pattern"));
+        assertTrue(output.contains("6) State pattern"));
     }
 
     @Test

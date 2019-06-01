@@ -5,6 +5,7 @@ import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.patterns.behavioral.command.CommandPattern;
 import pl.smtc.patterns.behavioral.iterator.IteratorPattern;
 import pl.smtc.patterns.behavioral.observer.ObserverPattern;
+import pl.smtc.patterns.behavioral.state.StatePattern;
 import pl.smtc.patterns.behavioral.strategy.StrategyPattern;
 import pl.smtc.patterns.behavioral.template.TemplateMethodPattern;
 
@@ -18,7 +19,7 @@ public class BehavioralPatterns implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new CommandPattern(), new StrategyPattern(), new ObserverPattern(),
-                    new TemplateMethodPattern(), new IteratorPattern());
+                    new TemplateMethodPattern(), new IteratorPattern(), new StatePattern());
 
         ConsoleMenu behavioralMenu = new ConsoleMenu(getName(), menuWidth, behavioralExamples);
         behavioralMenu.show();

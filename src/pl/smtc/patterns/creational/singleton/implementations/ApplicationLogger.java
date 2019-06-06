@@ -1,4 +1,4 @@
-package pl.smtc.patterns.creational.Singleton.implementations;
+package pl.smtc.patterns.creational.singleton.implementations;
 
 import java.util.ArrayList;
 import java.util.List;

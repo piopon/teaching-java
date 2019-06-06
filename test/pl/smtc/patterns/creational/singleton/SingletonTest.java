@@ -1,4 +1,4 @@
-package pl.smtc.patterns.creational.Singleton;
+package pl.smtc.patterns.creational.singleton;
 
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestInOut;

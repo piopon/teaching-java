@@ -1,13 +1,12 @@
-package pl.smtc.patterns.creational.Singleton;
+package pl.smtc.patterns.creational.singleton;
 
 import pl.smtc.menu.ConsoleExample;
-import pl.smtc.patterns.creational.Singleton.implementations.ApplicationLogger;
-import pl.smtc.patterns.creational.Singleton.implementations.RemoteResource;
+import pl.smtc.patterns.creational.singleton.implementations.ApplicationLogger;
+import pl.smtc.patterns.creational.singleton.implementations.RemoteResource;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.function.Function;
 
 public class Singleton implements ConsoleExample {
     private static final String EXIT_OPTION = "Q";

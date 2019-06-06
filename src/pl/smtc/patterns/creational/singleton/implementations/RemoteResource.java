@@ -1,4 +1,4 @@
-package pl.smtc.patterns.creational.Singleton.implementations;
+package pl.smtc.patterns.creational.singleton.implementations;
 
 public class RemoteResource {
     private static RemoteResource instance;

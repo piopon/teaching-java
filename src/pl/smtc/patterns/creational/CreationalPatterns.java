@@ -5,7 +5,7 @@ import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.patterns.creational.AbstractFactory.AbstractFactory;
 import pl.smtc.patterns.creational.FactoryMethod.FactoryMethod;
 import pl.smtc.patterns.creational.SimpleFactory.SimpleFactory;
-import pl.smtc.patterns.creational.Singleton.Singleton;
+import pl.smtc.patterns.creational.singleton.Singleton;
 
 import java.util.HashMap;
 import java.util.Map;

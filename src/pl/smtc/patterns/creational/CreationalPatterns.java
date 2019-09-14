@@ -5,6 +5,7 @@ import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.patterns.creational.AbstractFactory.AbstractFactory;
 import pl.smtc.patterns.creational.FactoryMethod.FactoryMethod;
 import pl.smtc.patterns.creational.SimpleFactory.SimpleFactory;
+import pl.smtc.patterns.creational.builder.BuilderPattern;
 import pl.smtc.patterns.creational.singleton.Singleton;
 
 import java.util.HashMap;
@@ -17,7 +18,7 @@ public class CreationalPatterns implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new SimpleFactory(), new FactoryMethod(), new AbstractFactory(),
-                    new Singleton());
+                    new Singleton(), new BuilderPattern());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, creationalExamples);
         creationalMenu.show();

@@ -23,8 +23,8 @@ class BeverageBottleBuilderTest {
 
     @Test
     void setClosureShouldReturnCorrectClosureType() {
-        builder.setClosure(ClosureType.FLIPTOP);
-        assertTrue(builder.getResult().toString().contains("with fliptop closure"));
+        builder.setClosure(ClosureType.FLIP_TOP);
+        assertTrue(builder.getResult().toString().contains("with flip top closure"));
     }
 
     @Test
@@ -50,7 +50,7 @@ class BeverageBottleBuilderTest {
         final double capacity = 5.0;
         final String label = "TEST_LABEL";
         final MaterialType material = MaterialType.GLASS_BLUE;
-        final ClosureType closure = ClosureType.FLIPTOP;
+        final ClosureType closure = ClosureType.FLIP_TOP;
 
         builder.setLabel(label);
         builder.setCapacity(capacity);

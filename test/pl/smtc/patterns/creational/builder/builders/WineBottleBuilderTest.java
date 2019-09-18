@@ -50,7 +50,7 @@ class WineBottleBuilderTest {
         final double capacity = 5.0;
         final String label = "TEST_LABEL";
         final MaterialType material = MaterialType.GLASS_BLUE;
-        final ClosureType closure = ClosureType.FLIPTOP;
+        final ClosureType closure = ClosureType.FLIP_TOP;
         final int punt = 7;
 
         builder.setLabel(label);

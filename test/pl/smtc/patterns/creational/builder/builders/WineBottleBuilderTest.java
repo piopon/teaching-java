@@ -63,7 +63,7 @@ class WineBottleBuilderTest {
 
     private String getExpectedResult(double capacity, MaterialType material, ClosureType closure, String label, int punt) {
         String materialStr = material.toString().toLowerCase().replace("_", " ");
-        String closureStr = closure.toString().toLowerCase();
+        String closureStr = closure.toString().toLowerCase().replace("_", " ");
         String bottleShape = materialStr + " with " + closureStr + " closure and " + punt + "cm punt";
         return label + " bottle (" + capacity + "l) - " + bottleShape;
     }

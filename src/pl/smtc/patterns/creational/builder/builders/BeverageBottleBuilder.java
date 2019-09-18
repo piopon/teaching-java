@@ -5,10 +5,10 @@ import pl.smtc.patterns.creational.builder.support.ClosureType;
 import pl.smtc.patterns.creational.builder.support.MaterialType;
 
 public class BeverageBottleBuilder implements BottleBuilder {
-    private double litreCapacity;
-    private MaterialType material;
-    private ClosureType closure;
-    private String label;
+    private double litreCapacity = 0.0;
+    private MaterialType material = MaterialType.PLASTIC;
+    private ClosureType closure = ClosureType.SCREW;
+    private String label = "BEVERAGE";
 
     @Override
     public void setCapacity(double litreCapacity) {

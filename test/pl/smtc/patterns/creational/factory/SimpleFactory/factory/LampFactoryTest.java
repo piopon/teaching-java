@@ -1,8 +1,8 @@
-package pl.smtc.patterns.creational.SimpleFactory.factory;
+package pl.smtc.patterns.creational.factory.SimpleFactory.factory;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.smtc.patterns.creational.SimpleFactory.product.ILamp;
+import pl.smtc.patterns.creational.factory.SimpleFactory.product.ILamp;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;

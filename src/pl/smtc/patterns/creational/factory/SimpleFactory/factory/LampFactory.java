@@ -1,6 +1,6 @@
-package pl.smtc.patterns.creational.SimpleFactory.factory;
+package pl.smtc.patterns.creational.factory.SimpleFactory.factory;
 
-import pl.smtc.patterns.creational.SimpleFactory.product.ILamp;
+import pl.smtc.patterns.creational.factory.SimpleFactory.product.ILamp;
 
 import java.util.HashMap;
 import java.util.Map;

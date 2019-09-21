@@ -1,6 +1,6 @@
-package pl.smtc.patterns.creational.FactoryMethod.product;
+package pl.smtc.patterns.creational.factory.FactoryMethod.product;
 
-import pl.smtc.patterns.creational.FactoryMethod.factory.Lamps;
+import pl.smtc.patterns.creational.factory.FactoryMethod.factory.Lamps;
 
 public class GardenLamp extends Lamp {
     private double storedEnergy = 100.0;

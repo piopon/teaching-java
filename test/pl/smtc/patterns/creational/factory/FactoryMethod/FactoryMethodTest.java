@@ -1,13 +1,13 @@
-package pl.smtc.patterns.creational.FactoryMethod;
+package pl.smtc.patterns.creational.factory.FactoryMethod;
 
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestInOut;
-import pl.smtc.patterns.creational.FactoryMethod.factory.ILampFactory;
-import pl.smtc.patterns.creational.FactoryMethod.factory.IndoorLampFactory;
-import pl.smtc.patterns.creational.FactoryMethod.factory.Lamps;
-import pl.smtc.patterns.creational.FactoryMethod.product.CeilingLamp;
-import pl.smtc.patterns.creational.FactoryMethod.product.Lamp;
-import pl.smtc.patterns.creational.FactoryMethod.product.WallLamp;
+import pl.smtc.patterns.creational.factory.FactoryMethod.factory.ILampFactory;
+import pl.smtc.patterns.creational.factory.FactoryMethod.factory.IndoorLampFactory;
+import pl.smtc.patterns.creational.factory.FactoryMethod.factory.Lamps;
+import pl.smtc.patterns.creational.factory.FactoryMethod.product.CeilingLamp;
+import pl.smtc.patterns.creational.factory.FactoryMethod.product.Lamp;
+import pl.smtc.patterns.creational.factory.FactoryMethod.product.WallLamp;
 
 import java.util.List;
 import java.util.Scanner;

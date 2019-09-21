@@ -38,7 +38,7 @@ public class ProductionDirector {
 
     public void createBeerBottle(BottleBuilder builder) {
         builder.setCapacity(0.5);
-        builder.setClosure(ClosureType.FLIPTOP);
+        builder.setClosure(ClosureType.FLIP_TOP);
         builder.setLabel("Beer");
         builder.setMaterial(MaterialType.GLASS_GREEN);
     }

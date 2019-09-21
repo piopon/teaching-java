@@ -19,7 +19,7 @@ public class BeverageBottle {
     @Override
     public String toString() {
         String materialStr = material.toString().toLowerCase().replace("_", " ");
-        String closureStr = closure.toString().toLowerCase();
+        String closureStr = closure.toString().toLowerCase().replace("_", " ");
         String bottleShape = materialStr + " with " + closureStr + " closure";
         return label + " bottle (" + litreCapacity + "l) - " + bottleShape;
     }

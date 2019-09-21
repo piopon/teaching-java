@@ -6,9 +6,9 @@ import pl.smtc.patterns.creational.builder.support.MaterialType;
 
 public class WineBottleBuilder implements BottleBuilder {
     private double litreCapacity = 0.0;
-    private MaterialType material;
-    private ClosureType closure;
-    private String label;
+    private MaterialType material = MaterialType.GLASS_WHITE;
+    private ClosureType closure = ClosureType.CORK;
+    private String label = "WINE";
     private int puntHeight = 0;
 
     @Override

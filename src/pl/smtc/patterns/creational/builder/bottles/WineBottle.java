@@ -21,7 +21,7 @@ public class WineBottle {
     @Override
     public String toString() {
         String materialStr = material.toString().toLowerCase().replace("_", " ");
-        String closureStr = closure.toString().toLowerCase();
+        String closureStr = closure.toString().toLowerCase().replace("_", " ");
         String bottleShape = materialStr + " with " + closureStr + " closure and " + puntHeight + "cm punt";
         return label + " bottle (" + litreCapacity + "l) - " + bottleShape;
     }

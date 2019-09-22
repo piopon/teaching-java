@@ -1,7 +1,7 @@
-package pl.smtc.patterns.creational.factory.SimpleFactory.product;
+package pl.smtc.patterns.creational.factory.simple.product;
 
 import org.junit.jupiter.api.Test;
-import pl.smtc.patterns.creational.factory.SimpleFactory.factory.Lamps;
+import pl.smtc.patterns.creational.factory.simple.factory.Lamps;
 
 import static org.junit.jupiter.api.Assertions.*;
 

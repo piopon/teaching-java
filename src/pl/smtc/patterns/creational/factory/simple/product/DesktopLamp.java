@@ -1,14 +1,14 @@
-package pl.smtc.patterns.creational.factory.SimpleFactory.product;
+package pl.smtc.patterns.creational.factory.simple.product;
 
-import pl.smtc.patterns.creational.factory.SimpleFactory.factory.Lamps;
+import pl.smtc.patterns.creational.factory.simple.factory.Lamps;
 
-public class WallLamp implements ILamp {
+public class DesktopLamp implements ILamp {
     private Lamps type;
     private String mounting;
     private String supply;
 
-    public WallLamp(String mounting, String supply) {
-        this.type = Lamps.WALL;
+    public DesktopLamp(String mounting, String supply) {
+        this.type = Lamps.DESKTOP;
         this.mounting = mounting;
         this.supply = supply;
     }

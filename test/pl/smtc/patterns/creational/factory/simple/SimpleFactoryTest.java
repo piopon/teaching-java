@@ -1,10 +1,10 @@
-package pl.smtc.patterns.creational.factory.SimpleFactory;
+package pl.smtc.patterns.creational.factory.simple;
 
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestInOut;
-import pl.smtc.patterns.creational.factory.SimpleFactory.factory.LampFactory;
-import pl.smtc.patterns.creational.factory.SimpleFactory.factory.Lamps;
-import pl.smtc.patterns.creational.factory.SimpleFactory.product.ILamp;
+import pl.smtc.patterns.creational.factory.simple.factory.LampFactory;
+import pl.smtc.patterns.creational.factory.simple.factory.Lamps;
+import pl.smtc.patterns.creational.factory.simple.product.ILamp;
 
 import java.util.List;
 import java.util.Scanner;

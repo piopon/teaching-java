@@ -1,11 +1,11 @@
-package pl.smtc.patterns.creational.factory.FactoryMethod;
+package pl.smtc.patterns.creational.factory.method;
 
 import pl.smtc.menu.ConsoleExample;
-import pl.smtc.patterns.creational.factory.FactoryMethod.factory.ILampFactory;
-import pl.smtc.patterns.creational.factory.FactoryMethod.factory.IndoorLampFactory;
-import pl.smtc.patterns.creational.factory.FactoryMethod.factory.Lamps;
-import pl.smtc.patterns.creational.factory.FactoryMethod.factory.OutdoorLampFactory;
-import pl.smtc.patterns.creational.factory.FactoryMethod.product.*;
+import pl.smtc.patterns.creational.factory.method.factory.ILampFactory;
+import pl.smtc.patterns.creational.factory.method.factory.IndoorLampFactory;
+import pl.smtc.patterns.creational.factory.method.factory.Lamps;
+import pl.smtc.patterns.creational.factory.method.factory.OutdoorLampFactory;
+import pl.smtc.patterns.creational.factory.method.product.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package pl.smtc.patterns.creational.factory.FactoryMethod.factory;
+package pl.smtc.patterns.creational.factory.method.factory;
 
-import pl.smtc.patterns.creational.factory.FactoryMethod.product.Lamp;
+import pl.smtc.patterns.creational.factory.method.product.Lamp;
 
 import java.util.*;
 

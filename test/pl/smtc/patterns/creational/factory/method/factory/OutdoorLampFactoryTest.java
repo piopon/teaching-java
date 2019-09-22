@@ -1,10 +1,10 @@
-package pl.smtc.patterns.creational.factory.FactoryMethod.factory;
+package pl.smtc.patterns.creational.factory.method.factory;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.smtc.patterns.creational.factory.FactoryMethod.product.CeilingLamp;
-import pl.smtc.patterns.creational.factory.FactoryMethod.product.GardenLamp;
-import pl.smtc.patterns.creational.factory.FactoryMethod.product.Lamp;
+import pl.smtc.patterns.creational.factory.method.product.CeilingLamp;
+import pl.smtc.patterns.creational.factory.method.product.GardenLamp;
+import pl.smtc.patterns.creational.factory.method.product.Lamp;
 
 import static org.junit.jupiter.api.Assertions.*;
 

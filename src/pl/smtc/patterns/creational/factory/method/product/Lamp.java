@@ -1,6 +1,6 @@
-package pl.smtc.patterns.creational.factory.FactoryMethod.product;
+package pl.smtc.patterns.creational.factory.method.product;
 
-import pl.smtc.patterns.creational.factory.FactoryMethod.factory.Lamps;
+import pl.smtc.patterns.creational.factory.method.factory.Lamps;
 
 public abstract class Lamp {
     protected Lamps type = Lamps.UNKNOWN;

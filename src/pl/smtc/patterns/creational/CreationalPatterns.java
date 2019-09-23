@@ -2,7 +2,7 @@ package pl.smtc.patterns.creational;
 
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
-import pl.smtc.patterns.creational.factory.AbstractFactory.AbstractFactory;
+import pl.smtc.patterns.creational.factory.abstrakt.AbstractFactory;
 import pl.smtc.patterns.creational.factory.method.FactoryMethod;
 import pl.smtc.patterns.creational.factory.simple.SimpleFactory;
 import pl.smtc.patterns.creational.builder.BuilderPattern;

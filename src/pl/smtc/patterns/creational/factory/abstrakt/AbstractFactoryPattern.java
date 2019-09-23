@@ -7,7 +7,7 @@ import pl.smtc.patterns.creational.factory.abstrakt.support.ShippingListCreator;
 
 import java.util.Scanner;
 
-public class AbstractFactory implements ConsoleExample {
+public class AbstractFactoryPattern implements ConsoleExample {
     private ShippingListCreator shipping = new ShippingListCreator(new FactoriesDataProvider());
 
     @Override

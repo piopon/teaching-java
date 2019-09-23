@@ -5,12 +5,12 @@ import pl.smtc.base.BaseTestInOut;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AbstractFactoryTest extends BaseTestInOut {
-    private AbstractFactory abstractFactory;
+class AbstractFactoryPatternTest extends BaseTestInOut {
+    private AbstractFactoryPattern abstractFactory;
 
     @Override
     protected void setUp() {
-        abstractFactory = new AbstractFactory();
+        abstractFactory = new AbstractFactoryPattern();
     }
 
     @Test

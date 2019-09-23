@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Singleton implements ConsoleExample {
+public class SingletonPattern implements ConsoleExample {
     private static final String EXIT_OPTION = "Q";
     private Map<String, Runnable> options = new HashMap<>();
 

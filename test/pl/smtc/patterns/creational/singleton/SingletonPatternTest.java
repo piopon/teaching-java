@@ -5,12 +5,12 @@ import pl.smtc.base.BaseTestInOut;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SingletonTest extends BaseTestInOut {
-    private Singleton singleton;
+class SingletonPatternTest extends BaseTestInOut {
+    private SingletonPattern singleton;
 
     @Override
     protected void setUp() {
-        singleton = new Singleton();
+        singleton = new SingletonPattern();
     }
 
     @Test

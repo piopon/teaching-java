@@ -14,12 +14,12 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FactoryMethodTest extends BaseTestInOut {
-    private FactoryMethod factoryMethod;
+class FactoryMethodPatternTest extends BaseTestInOut {
+    private FactoryMethodPattern factoryMethod;
 
     @Override
     protected void setUp() {
-        factoryMethod = new FactoryMethod();
+        factoryMethod = new FactoryMethodPattern();
     }
 
     @Test

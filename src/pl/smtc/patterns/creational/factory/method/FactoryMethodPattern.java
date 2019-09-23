@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class FactoryMethod implements ConsoleExample {
+public class FactoryMethodPattern implements ConsoleExample {
     protected boolean endOrder = false;
     private List<ILampFactory> lampFactories = new ArrayList<>();
     private List<Lamp> lampsOrder = new ArrayList<>();

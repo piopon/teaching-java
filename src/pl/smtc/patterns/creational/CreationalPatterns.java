@@ -3,7 +3,7 @@ package pl.smtc.patterns.creational;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.patterns.creational.factory.abstrakt.AbstractFactory;
-import pl.smtc.patterns.creational.factory.method.FactoryMethod;
+import pl.smtc.patterns.creational.factory.method.FactoryMethodPattern;
 import pl.smtc.patterns.creational.factory.simple.SimpleFactoryPattern;
 import pl.smtc.patterns.creational.builder.BuilderPattern;
 import pl.smtc.patterns.creational.singleton.Singleton;
@@ -17,7 +17,7 @@ public class CreationalPatterns implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new SimpleFactoryPattern(), new FactoryMethod(), new AbstractFactory(),
+        addExamples(new SimpleFactoryPattern(), new FactoryMethodPattern(), new AbstractFactory(),
                     new Singleton(), new BuilderPattern());
 
         ConsoleMenu creationalMenu = new ConsoleMenu(getName(), menuWidth, creationalExamples);

@@ -13,12 +13,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class SimpleFactoryTest extends BaseTestInOut {
-    SimpleFactory simpleFactory;
+class SimpleFactoryPatternTest extends BaseTestInOut {
+    SimpleFactoryPattern simpleFactory;
 
     @Override
     protected void setUp() {
-        simpleFactory = new SimpleFactory();
+        simpleFactory = new SimpleFactoryPattern();
         LampFactory.clearRegisteredLamps();
         LampFactory.registerLamp(createLamp(Lamps.CEILING, "Ceiling lamp description"));
         LampFactory.registerLamp(createLamp(Lamps.WALL, "Wall lamp description"));

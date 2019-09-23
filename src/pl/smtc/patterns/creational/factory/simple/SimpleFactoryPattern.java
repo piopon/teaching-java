@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class SimpleFactory implements ConsoleExample {
+public class SimpleFactoryPattern implements ConsoleExample {
     static {
         LampFactory.clearRegisteredLamps();
         LampFactory.registerLamp(new CeilingLamp("DOWELS", "100-230V"));

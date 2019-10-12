@@ -32,10 +32,11 @@ class MainTest {
         Main.main(new String[]{""});
         String output = OUTPUT_STREAM.toString();
         assertTrue(output.contains("MAIN MENU"));
-        assertTrue(output.contains("1) Recursion examples"));
-        assertTrue(output.contains("2) Concurrency examples"));
-        assertTrue(output.contains("3) Algorithm examples"));
-        assertTrue(output.contains("4) Design patterns"));
+        assertTrue(output.contains("1) Basics examples"));
+        assertTrue(output.contains("2) Recursion examples"));
+        assertTrue(output.contains("3) Concurrency examples"));
+        assertTrue(output.contains("4) Algorithm examples"));
+        assertTrue(output.contains("5) Design patterns"));
     }
 
     private void simulateUserInput(String simInput) {

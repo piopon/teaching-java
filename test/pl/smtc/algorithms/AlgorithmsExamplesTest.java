@@ -15,7 +15,7 @@ class AlgorithmsExamplesTest extends BaseTestInOut {
     }
 
     @Test
-    void execute() {
+    void executeShouldInvokeAlgorithmExamples() {
         simulateUserInput("0");
         algorithmsExamples.execute();
         String output = getOutput();

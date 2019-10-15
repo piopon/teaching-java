@@ -5,7 +5,7 @@ import pl.smtc.menu.ConsoleExample;
 public class HelloWorld implements ConsoleExample {
     @Override
     public void execute() {
-        System.out.println("Hello word!");
+        System.out.println("Hello world!");
     }
 
     @Override

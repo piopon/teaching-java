@@ -2,6 +2,7 @@ package pl.smtc.basics.primitives.examples;
 
 import pl.smtc.menu.ConsoleExample;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class WeightConverter implements ConsoleExample {
@@ -10,7 +11,7 @@ public class WeightConverter implements ConsoleExample {
     @Override
     public void execute() {
         System.out.print("Input weight to convert: ");
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in).useLocale(Locale.ENGLISH);
         double input = in.nextDouble();
         double toKilograms = input * POUND_TO_KILOGRAM;
         System.out.println(input + "lb = " + toKilograms + "kg");

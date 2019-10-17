@@ -1,5 +1,6 @@
 package pl.smtc.basics.primitives;
 
+import pl.smtc.basics.primitives.examples.PrimitivesExamples;
 import pl.smtc.basics.primitives.floating.FloatingPointTypes;
 import pl.smtc.basics.primitives.integral.IntegralTypes;
 import pl.smtc.menu.ConsoleExample;
@@ -14,7 +15,7 @@ public class PrimitiveTypes implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new IntegralTypes(), new FloatingPointTypes());
+        addExamples(new IntegralTypes(), new FloatingPointTypes(), new PrimitivesExamples());
 
         ConsoleMenu primitivesMenu = new ConsoleMenu(getName(), menuWidth, primitivesExamples);
         primitivesMenu.show();

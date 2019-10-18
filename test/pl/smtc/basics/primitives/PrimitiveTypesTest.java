@@ -22,7 +22,8 @@ class PrimitiveTypesTest extends BaseTestInOut {
         assertTrue(output.contains("1) Integral types"));
         assertTrue(output.contains("2) Floating point types"));
         assertTrue(output.contains("3) Character types"));
-        assertTrue(output.contains("4) Examples"));
+        assertTrue(output.contains("4) Boolean types"));
+        assertTrue(output.contains("5) Examples"));
     }
 
     @Test

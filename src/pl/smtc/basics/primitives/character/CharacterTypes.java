@@ -13,7 +13,7 @@ public class CharacterTypes implements ConsoleExample {
         printSummary();
     }
 
-    @Overrideit 
+    @Override
     public String getName() {
         return "Character types";
     }

@@ -21,6 +21,7 @@ class PrimitivesExamplesTest extends BaseTestInOut {
         String output = getOutput();
         assertTrue(output.contains("EXAMPLES"));
         assertTrue(output.contains("1) Weight converter"));
+        assertTrue(output.contains("2) Kilobytes converter"));
     }
 
     @Test

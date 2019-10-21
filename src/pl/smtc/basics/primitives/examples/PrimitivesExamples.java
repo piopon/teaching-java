@@ -12,7 +12,7 @@ public class PrimitivesExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new WeightConverter(), new KilobytesConverter());
+        addExamples(new WeightConverter(), new KilobytesConverter(), new DefaultValues());
 
         ConsoleMenu primitivesMenu = new ConsoleMenu(getName(), menuWidth, typesExamples);
         primitivesMenu.show();

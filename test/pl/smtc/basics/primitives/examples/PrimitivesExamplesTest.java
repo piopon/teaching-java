@@ -22,6 +22,7 @@ class PrimitivesExamplesTest extends BaseTestInOut {
         assertTrue(output.contains("EXAMPLES"));
         assertTrue(output.contains("1) Weight converter"));
         assertTrue(output.contains("2) Kilobytes converter"));
+        assertTrue(output.contains("3) Default values"));
     }
 
     @Test

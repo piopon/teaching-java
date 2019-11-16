@@ -1,6 +1,7 @@
 package pl.smtc;
 
 import pl.smtc.algorithms.AlgorithmsExamples;
+import pl.smtc.basics.BasicsExamples;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 import pl.smtc.patterns.DesignPatternsExamples;
@@ -14,8 +15,8 @@ public class Main {
     static Map<Integer, ConsoleExample> EXAMPLES = new HashMap<>();
 
     public static void main(String[] args) {
-        addExamples(new RecursionExamples(), new ConcurrencyExamples(), new AlgorithmsExamples(),
-                    new DesignPatternsExamples());
+        addExamples(new BasicsExamples(), new RecursionExamples(), new ConcurrencyExamples(),
+                    new AlgorithmsExamples(), new DesignPatternsExamples());
 
         ConsoleMenu topMenu = new ConsoleMenu("Main menu", 35, EXAMPLES);
         topMenu.show();

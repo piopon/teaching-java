@@ -1,5 +1,6 @@
 package pl.smtc.basics.string;
 
+import pl.smtc.basics.string.transformations.StringTransformations;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 
@@ -12,7 +13,7 @@ public class StringType implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples();
+        addExamples(new StringTransformations());
 
         ConsoleMenu stringMenu = new ConsoleMenu(getName(), menuWidth, stringExamples);
         stringMenu.show();

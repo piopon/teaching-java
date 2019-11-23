@@ -12,7 +12,7 @@ public class StringTransformations implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new StringReplace());
+        addExamples(new StringReplace(), new StringSplit());
 
         ConsoleMenu stringMenu = new ConsoleMenu(getName(), menuWidth, stringTransformations);
         stringMenu.show();

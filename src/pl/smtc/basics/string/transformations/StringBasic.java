@@ -7,6 +7,18 @@ public class StringBasic implements ConsoleExample {
 
     @Override
     public void execute() {
+        System.out.println("Input string: " + INPUT_STRING);
+        baseExamples();
+        String joined = String.join("+", "my", "test", "str");
+        System.out.println("Joined string: " + joined);
+    }
+
+    @Override
+    public String getName() {
+        return "String basic transformations";
+    }
+
+    private void baseExamples() {
         String added = INPUT_STRING + " with const addition.";
         System.out.println("Added string: " + added);
         String lower = INPUT_STRING.toLowerCase();
@@ -15,12 +27,5 @@ public class StringBasic implements ConsoleExample {
         System.out.println("Upped string: " + upper);
         String trimmed = INPUT_STRING.trim();
         System.out.println("Trimmed string: " + trimmed);
-        String joined = String.join("+", "my", "test", "str");
-        System.out.println("Joined string: " + joined);
-    }
-
-    @Override
-    public String getName() {
-        return "String basic transformations";
     }
 }

@@ -26,6 +26,8 @@ public class StringBasic implements ConsoleExample {
         System.out.println(SEPARATOR);
         String added = INPUT_STRING + " with const addition.";
         System.out.println("Added string: " + added);
+        String concat = INPUT_STRING.concat(" with concatenation.");
+        System.out.println("Concatenated: " + concat);
         String lower = INPUT_STRING.toLowerCase();
         System.out.println("Lower string: " + lower);
         String upper = INPUT_STRING.toUpperCase();

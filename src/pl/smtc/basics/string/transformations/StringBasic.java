@@ -19,7 +19,7 @@ public class StringBasic implements ConsoleExample {
 
     @Override
     public String getName() {
-        return "String basic transformations";
+        return "Basic transformations";
     }
 
     private void baseExamples() {

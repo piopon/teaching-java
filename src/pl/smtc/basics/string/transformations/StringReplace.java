@@ -20,6 +20,6 @@ public class StringReplace implements ConsoleExample {
 
     @Override
     public String getName() {
-        return "String replace";
+        return "Replacing parts";
     }
 }

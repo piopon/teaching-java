@@ -19,7 +19,7 @@ public class StringSplit implements ConsoleExample {
 
     @Override
     public String getName() {
-        return "String split";
+        return "Splitting string";
     }
 
     private void splitExamples() {

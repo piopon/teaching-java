@@ -12,7 +12,7 @@ public class StringInspections implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new StringBasic());
+        addExamples(new StringBasic(), new StringIndex());
 
         ConsoleMenu inspectionsMenu = new ConsoleMenu(getName(), menuWidth, stringInspections);
         inspectionsMenu.show();

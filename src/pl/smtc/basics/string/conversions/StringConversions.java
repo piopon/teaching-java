@@ -12,7 +12,7 @@ public class StringConversions implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new StringFromBool());
+        addExamples(new StringFromBool(), new StringFromChars());
 
         ConsoleMenu conversionsMenu = new ConsoleMenu(getName(), menuWidth, stringConversions);
         conversionsMenu.show();

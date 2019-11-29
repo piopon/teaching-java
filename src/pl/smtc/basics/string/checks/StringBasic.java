@@ -8,7 +8,7 @@ public class StringBasic implements ConsoleExample {
         String input = "Test string";
         System.out.println("Input string: " + input);
         int inputLength = input.length();
-        System.out.println("Input string length" + inputLength);
+        System.out.println("Input string length: " + inputLength);
         boolean isEmpty = input.isEmpty();
         System.out.println("In input string empty: " + isEmpty);
     }

@@ -13,7 +13,7 @@ public class StringChecks implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new StringBasic(), new StringEquals(),
-                    new StringBounds(), new StringContents());
+                    new StringBounds(), new StringContents(), new StringMatchers());
 
         ConsoleMenu checksMenu = new ConsoleMenu(getName(), menuWidth, stringChecks);
         checksMenu.show();

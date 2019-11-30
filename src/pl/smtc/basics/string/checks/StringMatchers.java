@@ -7,6 +7,7 @@ public class StringMatchers implements ConsoleExample {
     @Override
     public void execute() {
         regexMatchers();
+        regionMatchers();
     }
 
     @Override
@@ -21,5 +22,13 @@ public class StringMatchers implements ConsoleExample {
         String badPostalCode = "82400";
         boolean nokZip = badPostalCode.matches(POSTAL_CODE_REGEX);
         System.out.println("Is \'" + badPostalCode + "\' valid zip code: " + nokZip);
+    }
+
+    private void regionMatchers() {
+        String inputString = "Test string";
+        boolean regionOk = inputString.regionMatches(4, "Some string", 4, 3);
+        System.out.println("String region the same: " + regionOk);
+        boolean caseOk = inputString.regionMatches(true, 4, "Some STRing", 4, 3);
+        System.out.println("String region the same (ignore case): " + caseOk);
     }
 }

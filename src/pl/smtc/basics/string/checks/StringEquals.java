@@ -10,6 +10,7 @@ public class StringEquals implements ConsoleExample {
         System.out.println("Input string: " + INPUT);
         equalsChecks();
         contentEqualsChecks();
+        compareChecks();
     }
 
     @Override
@@ -34,4 +35,12 @@ public class StringEquals implements ConsoleExample {
         System.out.println("Is buffer equal to \'" + INPUT + "\': " + contentEqual);
     }
 
+    private void compareChecks() {
+        int sameDiff = INPUT.compareTo("Test string");
+        System.out.println("Comparing to \'Test string\': " + sameDiff);
+        int diff = INPUT.compareTo("TEST STRING");
+        System.out.println("Comparing to \'TEST STRING\': " + diff);
+        int sameCase = INPUT.compareToIgnoreCase("TEST STRING");
+        System.out.println("Comparing to \'TEST STRING\' (ignore case): " + sameCase);
+    }
 }

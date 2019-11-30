@@ -12,7 +12,8 @@ public class StringChecks implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new StringBasic(), new StringBounds(), new StringContents());
+        addExamples(new StringBasic(), new StringEquals(),
+                    new StringBounds(), new StringContents());
 
         ConsoleMenu checksMenu = new ConsoleMenu(getName(), menuWidth, stringChecks);
         checksMenu.show();

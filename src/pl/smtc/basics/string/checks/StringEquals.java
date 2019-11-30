@@ -3,20 +3,35 @@ package pl.smtc.basics.string.checks;
 import pl.smtc.menu.ConsoleExample;
 
 public class StringEquals implements ConsoleExample {
+    private final static String INPUT = "Test string";
+
     @Override
     public void execute() {
-        String input = "Test string";
-        System.out.println("Input string: " + input);
-        boolean isEqual = input.equals("Test string");
-        System.out.println("Is input equal to \'Test string\': " + isEqual);
-        boolean notEqual = input.equals("Test String");
-        System.out.println("Is input equal to \'Test String\': " + notEqual);
-        boolean caseEqual = input.equalsIgnoreCase("Test String");
-        System.out.println("Is input equal to \'Test String\' (ignore case): " + caseEqual);
+        System.out.println("Input string: " + INPUT);
+        equalsChecks();
+        contentEqualsChecks();
     }
 
     @Override
     public String getName() {
         return "Equality checks";
     }
+
+    private void equalsChecks() {
+        boolean isEqual = INPUT.equals("Test string");
+        System.out.println("Is input equal to \'Test string\': " + isEqual);
+        boolean notEqual = INPUT.equals("Test String");
+        System.out.println("Is input equal to \'Test String\': " + notEqual);
+        boolean caseEqual = INPUT.equalsIgnoreCase("Test String");
+        System.out.println("Is input equal to \'Test String\' (ignore case): " + caseEqual);
+    }
+
+    private void contentEqualsChecks() {
+        boolean contentEqual = INPUT.contentEquals("Test string");
+        System.out.println("Is content equal to \'" + INPUT + "\': " + contentEqual);
+        StringBuffer buffer = new StringBuffer("Test string");
+        boolean bufferEqual = INPUT.contentEquals(buffer);
+        System.out.println("Is buffer equal to \'" + INPUT + "\': " + contentEqual);
+    }
+
 }

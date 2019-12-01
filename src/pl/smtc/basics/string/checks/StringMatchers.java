@@ -4,6 +4,7 @@ import pl.smtc.menu.ConsoleExample;
 
 public class StringMatchers implements ConsoleExample {
     private final static String POSTAL_CODE_REGEX = "\\d{2}-\\d{3}";
+
     @Override
     public void execute() {
         regexMatchers();

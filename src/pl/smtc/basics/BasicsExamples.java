@@ -1,6 +1,7 @@
 package pl.smtc.basics;
 
 import pl.smtc.basics.hello.HelloWorld;
+import pl.smtc.basics.operators.Operators;
 import pl.smtc.basics.primitives.PrimitiveTypes;
 import pl.smtc.basics.string.StringType;
 import pl.smtc.menu.ConsoleExample;
@@ -15,7 +16,8 @@ public class BasicsExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new HelloWorld(), new PrimitiveTypes(), new StringType());
+        addExamples(new HelloWorld(), new PrimitiveTypes(), new StringType(),
+                    new Operators());
 
         ConsoleMenu basicsMenu = new ConsoleMenu(getName(), menuWidth, basicsExamples);
         basicsMenu.show();

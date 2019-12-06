@@ -2,6 +2,7 @@ package pl.smtc.basics.operators;
 
 import pl.smtc.basics.operators.arithmetic.ArithmeticOperators;
 import pl.smtc.basics.operators.arithmetic.UnaryOperators;
+import pl.smtc.basics.operators.bitwise.BitwiseOperators;
 import pl.smtc.basics.operators.relational.ConditionalOperators;
 import pl.smtc.basics.operators.relational.RelationalOperators;
 import pl.smtc.menu.ConsoleExample;
@@ -17,7 +18,8 @@ public class Operators implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new ArithmeticOperators(), new UnaryOperators(),
-                    new ConditionalOperators(), new RelationalOperators());
+                    new ConditionalOperators(), new RelationalOperators(),
+                    new BitwiseOperators());
 
         ConsoleMenu operatorsMenu = new ConsoleMenu(getName(), menuWidth, operatorsExamples);
         operatorsMenu.show();

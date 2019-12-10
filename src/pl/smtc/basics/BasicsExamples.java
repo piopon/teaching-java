@@ -16,8 +16,8 @@ public class BasicsExamples implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new HelloWorld(), new PrimitiveTypes(), new StringType(),
-                    new Operators());
+        addExamples(new HelloWorld(), new PrimitiveTypes(), new Operators(),
+                    new StringType());
 
         ConsoleMenu basicsMenu = new ConsoleMenu(getName(), menuWidth, basicsExamples);
         basicsMenu.show();

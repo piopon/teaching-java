@@ -22,6 +22,8 @@ class BasicsExamplesTest extends BaseTestInOut {
         assertTrue(output.contains("BASICS EXAMPLES"));
         assertTrue(output.contains("1) Hello world"));
         assertTrue(output.contains("2) Primitive types"));
+        assertTrue(output.contains("3) Operators"));
+        assertTrue(output.contains("4) String type"));
     }
 
     @Test

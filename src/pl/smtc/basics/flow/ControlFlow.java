@@ -1,6 +1,7 @@
 package pl.smtc.basics.flow;
 
 import pl.smtc.basics.flow.decision.IfElseifElseExample;
+import pl.smtc.basics.flow.decision.SwitchCaseExample;
 import pl.smtc.menu.ConsoleExample;
 import pl.smtc.menu.ConsoleMenu;
 
@@ -13,7 +14,7 @@ public class ControlFlow implements ConsoleExample {
 
     @Override
     public void execute() {
-        addExamples(new IfElseifElseExample());
+        addExamples(new IfElseifElseExample(), new SwitchCaseExample());
 
         ConsoleMenu controlFlowMenu = new ConsoleMenu(getName(), menuWidth, controlFlowExamples);
         controlFlowMenu.show();

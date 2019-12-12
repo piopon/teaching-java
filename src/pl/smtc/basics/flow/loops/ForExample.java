@@ -10,7 +10,7 @@ public class ForExample implements ConsoleExample {
         System.out.print("How many loops to execute? ");
         int loopMax = new Scanner(System.in).nextInt();
         for (int loopNo = 0; loopNo < loopMax; loopNo++) {
-            System.out.println("Current loop counter: " + loopNo + 1);
+            System.out.println("Current loop counter: " + (loopNo + 1));
         }
     }
 

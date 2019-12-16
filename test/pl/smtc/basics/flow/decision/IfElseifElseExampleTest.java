@@ -20,7 +20,7 @@ class IfElseifElseExampleTest extends BaseTestInOut {
 
     @ParameterizedTest(name = "{0} block output: {1}")
     @MethodSource("ifElseStatementLogic")
-    void executeShouldInvokeIfElseExampleWithIfLogic(String in, String out) {
+    void executeShouldInvokeIfElseExample(String in, String out) {
         simulateUserInput(in);
         ifElseExample.execute();
         String output = getOutput();

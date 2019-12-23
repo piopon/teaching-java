@@ -2,6 +2,7 @@ package pl.smtc.basics.flow;
 
 import pl.smtc.basics.flow.decision.IfElseifElseExample;
 import pl.smtc.basics.flow.decision.SwitchCaseExample;
+import pl.smtc.basics.flow.examples.FlowExamples;
 import pl.smtc.basics.flow.interrupt.BreakExample;
 import pl.smtc.basics.flow.interrupt.ContinueExample;
 import pl.smtc.basics.flow.interrupt.ReturnExample;
@@ -22,7 +23,7 @@ public class ControlFlow implements ConsoleExample {
     public void execute() {
         addExamples(new IfElseifElseExample(), new SwitchCaseExample(), new ForExample(),
                     new WhileExample(), new DoWhileExample(), new BreakExample(),
-                    new ContinueExample(), new ReturnExample());
+                    new ContinueExample(), new ReturnExample(), new FlowExamples());
 
         ConsoleMenu controlFlowMenu = new ConsoleMenu(getName(), menuWidth, controlFlowExamples);
         controlFlowMenu.show();

@@ -13,7 +13,7 @@ public class FlowExamples implements ConsoleExample {
     @Override
     public void execute() {
         addExamples(new SumOddNumbers(), new PalindromeNumber(), new BoundsDigitsSum(),
-                    new AllFactors(), new PerfectNumber());
+                    new AllFactors(), new PerfectNumber(), new DiagonalStar());
 
         ConsoleMenu examplesMenu = new ConsoleMenu(getName(), menuWidth, flowExamples);
         examplesMenu.show();

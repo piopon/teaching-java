@@ -41,9 +41,6 @@ public class DaysInMonth implements ConsoleExample {
     }
 
     private boolean isLeapYear(int year) {
-        if (year < 1 || year > 9999) {
-            return false;
-        }
         boolean divBy4Not100 = (year % 4 == 0) && (year % 100 != 0);
         boolean divBy400 = (year % 400 == 0);
         return (divBy4Not100 || divBy400);

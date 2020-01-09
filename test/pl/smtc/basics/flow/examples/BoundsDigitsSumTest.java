@@ -41,6 +41,10 @@ class BoundsDigitsSumTest extends BaseTestInOut {
 
     private static Stream<Arguments> digitsSumTestData() {
         return Stream.of(
+                Arguments.of(-12345, -1),
+                Arguments.of(-667, -1),
+                Arguments.of(-11, -1),
+                Arguments.of(-1, -1),
                 Arguments.of(0, 0),
                 Arguments.of(1, 2),
                 Arguments.of(8, 16),

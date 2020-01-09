@@ -27,6 +27,22 @@ class DaysInMonthTest extends BaseTestInOut {
     }
 
     @Test
+    void executeShouldInvokeExampleAndShowErrorMessageWhenInputIsNok() {
+        simulateUserInput("2018");
+        daysInMonth.execute();
+        String output = getOutput();
+        assertTrue(output.contains("Bad input: 2018"));
+    }
+
+    @Test
+    void executeShouldInvokeExampleAndShowErrorMessageWhenInputIsNaN() {
+        simulateUserInput("abc/2018");
+        daysInMonth.execute();
+        String output = getOutput();
+        assertTrue(output.contains("Bad input: For input string: \"abc\""));
+    }
+
+    @Test
     void getNameShouldReturnDaysInMonthString() {
         assertEquals("Days in month", daysInMonth.getName());
     }

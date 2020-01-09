@@ -17,7 +17,7 @@ public class DaysInMonth implements ConsoleExample {
                 int days = getDaysInMonth(Integer.parseInt(parts.get(0)), Integer.parseInt(parts.get(1)));
                 System.out.println("Days in " + input + ": " + days);
             } catch (NumberFormatException e) {
-                System.out.println(e.getMessage());
+                System.out.println("Bad input: " + e.getMessage());
             }
         } else {
             System.out.println("Bad input: " + input);

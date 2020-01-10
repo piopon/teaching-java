@@ -16,7 +16,8 @@ class TreeExplorerTest extends BaseTestOut {
     @Override
     protected void setUp() {
         treeExplorer = new TreeExplorer();
-        sourceDir = Paths.get(new File("").getAbsolutePath(), "src", "pl", "smtc", "recursion");
+        sourceDir = Paths.get(new File("").getAbsolutePath(),
+                "src", "main", "java", "pl", "smtc", "recursion");
     }
 
     @Test

@@ -22,10 +22,8 @@ public class TreeExplorer implements ConsoleExample {
 
     public String getCurrentDirectory() {
         return Paths.get(new File("").getAbsolutePath())
-                .resolve("src")
-                .resolve("pl")
-                .resolve("smtc")
-                .resolve("recursion")
+                .resolve("src").resolve("main").resolve("java")
+                .resolve("pl").resolve("smtc").resolve("recursion")
                 .toString();
     }
 

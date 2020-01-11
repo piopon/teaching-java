@@ -2,7 +2,6 @@ package pl.smtc.algorithms;
 
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestInOut;
-import pl.smtc.base.BaseTestOut;
 
 import static org.junit.jupiter.api.Assertions.*;
 

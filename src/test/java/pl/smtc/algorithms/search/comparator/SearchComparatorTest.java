@@ -1,7 +1,6 @@
 package pl.smtc.algorithms.search.comparator;
 
 import org.junit.jupiter.api.Test;
-import pl.smtc.algorithms.sort.comparator.SortExample;
 import pl.smtc.base.BaseTestOut;
 
 import java.util.Arrays;

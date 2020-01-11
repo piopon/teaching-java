@@ -21,8 +21,8 @@ class TestTimerTest {
     @Test
     void getResultShouldReturnCorrectFunctionResult() {
         testTimer.execute(2,3);
-        Double expected = 8.0;
-        assertEquals(expected, testTimer.getResult());
+        double expected = 8.0;
+        assertEquals(expected, testTimer.getResult().doubleValue());
     }
 
     @Test

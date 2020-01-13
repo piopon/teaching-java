@@ -1,5 +1,6 @@
 package pl.smtc.patterns.behavioral.state.support;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestOut;
 
@@ -16,6 +17,12 @@ class PrintQueueTest extends BaseTestOut {
         printQueue = new PrintQueue();
         printQueue.clearQueue();
         printQueue.push(document, thread);
+    }
+
+    @AfterEach
+    protected void cleanup() throws InterruptedException {
+        thread.join();
+        printQueue.clearQueue();
     }
 
     @Test

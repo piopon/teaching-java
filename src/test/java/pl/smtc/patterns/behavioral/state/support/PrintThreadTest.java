@@ -1,5 +1,6 @@
 package pl.smtc.patterns.behavioral.state.support;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestOut;
 
@@ -14,6 +15,13 @@ class PrintThreadTest extends BaseTestOut {
     protected void setUp() {
         Runnable runnable = () -> System.out.println(endPrint);
         printThread = new PrintThread(document, 10, runnable);
+    }
+
+    @AfterEach
+    private void cleanTest() throws InterruptedException {
+        if (printThread.isAlive()) {
+            printThread.join();
+        }
     }
 
     @Test

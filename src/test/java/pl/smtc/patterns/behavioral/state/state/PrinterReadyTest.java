@@ -1,5 +1,6 @@
 package pl.smtc.patterns.behavioral.state.state;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestOut;
 import pl.smtc.patterns.behavioral.state.context.Printer;
@@ -13,6 +14,11 @@ class PrinterReadyTest extends BaseTestOut {
     @Override
     protected void setUp() {
         printerReady = new PrinterReady(mockPrinter);
+    }
+
+    @AfterEach
+    protected void cleanup() {
+        mockPrinter.waitForAllPrints();
     }
 
     @Test

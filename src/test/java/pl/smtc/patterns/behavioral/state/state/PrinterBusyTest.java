@@ -1,5 +1,6 @@
 package pl.smtc.patterns.behavioral.state.state;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestOut;
 import pl.smtc.patterns.behavioral.state.context.Printer;
@@ -14,6 +15,11 @@ class PrinterBusyTest extends BaseTestOut {
     @Override
     protected void setUp() {
         printerBusy = new PrinterBusy(mockPrinter, printSimTime);
+    }
+
+    @AfterEach
+    protected void cleanTest() {
+        mockPrinter.waitForAllPrints();
     }
 
     @Test

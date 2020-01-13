@@ -1,5 +1,6 @@
 package pl.smtc.patterns.behavioral.state.support;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import pl.smtc.base.BaseTestOut;
 import pl.smtc.patterns.behavioral.state.context.Printer;
@@ -17,6 +18,11 @@ class PrintWorkerTest extends BaseTestOut {
     protected void setUp() {
         printerQueue.clearQueue();
         printWorker = new PrintWorker(printer, printerQueue);
+    }
+
+    @AfterEach
+    protected void cleanTest() {
+        printer.waitForAllPrints();
     }
 
     @Test

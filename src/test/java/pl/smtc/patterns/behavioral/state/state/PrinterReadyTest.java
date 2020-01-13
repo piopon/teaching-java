@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PrinterReadyTest extends BaseTestOut {
     private PrinterReady printerReady;
-    private final Printer mockPrinter = new Printer(50);
+    private final Printer mockPrinter = new Printer(5);
 
     @Override
     protected void setUp() {
@@ -23,7 +23,7 @@ class PrinterReadyTest extends BaseTestOut {
 
     @Test
     void printShouldInvokePrinterReadyPrintState() {
-        printerReady.print("test_doc.txt");
+        printerReady.print("printer_ready_test.txt");
         String output = getOutput();
         assertTrue(output.contains("Printer is ready."));
         assertTrue(output.contains("Checking ink cassettes:"));

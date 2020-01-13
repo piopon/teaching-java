@@ -20,18 +20,15 @@ class ThreadsStarvationTest extends BaseTestOut {
     void executeShouldInvokeThreadsStarvationExample() {
         threadsStarvation.execute();
         String output = getOutput();
-        String notExpectedSequence1[] = {"Thread priority 1 -> count: 0",
+        String notExpectedSequence[] = {"Thread priority 1 -> count: 0",
                 "Thread priority 1 -> count: 100", "Thread priority 1 -> count: 200",
-                "Thread priority 1 -> count: 300", "Thread priority 1 -> count: 400"};
-        assertFalse(outputContainsInOrder(output, notExpectedSequence1));
-        String notExpectedSequence2[] = {"Thread priority 6 -> count: 0",
-                "Thread priority 6 -> count: 100", "Thread priority 6 -> count: 200",
-                "Thread priority 6 -> count: 300", "Thread priority 6 -> count: 400"};
-        assertFalse(outputContainsInOrder(output, notExpectedSequence2));
-        String notExpectedSequence3[] = {"Thread priority 10 -> count: 0",
+                "Thread priority 1 -> count: 300", "Thread priority 1 -> count: 400",
+                "Thread priority 6 -> count: 0", "Thread priority 6 -> count: 100",
+                "Thread priority 6 -> count: 200", "Thread priority 6 -> count: 300",
+                "Thread priority 6 -> count: 400", "Thread priority 10 -> count: 0",
                 "Thread priority 10 -> count: 100", "Thread priority 10 -> count: 200",
-                "Thread priority 10 -> count: 300", "Thread priority 10 -> count: 400"};
-        assertFalse(outputContainsInOrder(output, notExpectedSequence3));
+                "Thread priority 10 -> count: 300", "Thread priority 10 -> count: 400" };
+        assertFalse(outputContainsInOrder(output, notExpectedSequence));
     }
 
     @Test

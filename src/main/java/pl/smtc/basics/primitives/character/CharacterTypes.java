@@ -6,9 +6,9 @@ public class CharacterTypes implements ConsoleExample {
     @Override
     public void execute() {
         char pChar = 'P';
-        char nChar ='\u0418';
-        char kChar ='\u049E';
-        System.out.println("Unicode characters example: " + pChar + nChar + kChar + " \u06E9 2019");
+        char nChar ='n';
+        char kChar ='K';
+        System.out.println("Unicode characters example: " + pChar + nChar + kChar + " @ 2019");
 
         printSummary();
     }

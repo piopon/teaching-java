@@ -17,7 +17,7 @@ class CharacterTypesTest extends BaseTestOut {
     void executeShouldInvokeCharacterTypesExample() {
         characterTypes.execute();
         String output = getOutput();
-        assertTrue(output.contains("Unicode characters example: P\u0418\u049E \u06E9 2019"));
+        assertTrue(output.contains("Unicode characters example: PnK @ 2019"));
     }
 
     @Test

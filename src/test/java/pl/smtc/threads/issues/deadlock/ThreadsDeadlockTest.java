@@ -18,7 +18,10 @@ class ThreadsDeadlockTest extends BaseTestInOut {
         simulateUserInput(System.lineSeparator());
         deadlock.execute();
         String output = getOutput();
-        assertTrue(output.contains(" -> deadlock!"));
+        assertTrue(output.contains("CommObjectReceive-> got LOCK 2"));
+        assertTrue(output.contains("CommObjectSend-> got LOCK 1"));
+        assertTrue(output.contains("CommObjectReceive -> wait LOCK 1"));
+        assertTrue(output.contains("CommObjectSend -> wait LOCK 2"));
     }
 
     @Test

@@ -19,7 +19,8 @@ class SemaphoreSyncTest extends BaseTestInOut {
         semaphoreSync.execute();
         String output = getOutput();
         assertTrue(output.contains("FTP access OK [current connections: 1]"));
-        assertFalse(output.contains("FTP access OK [current connections: 4]"));
+        assertFalse(output.contains("FTP access OK [current connections: 5]"));
+        assertTrue(output.contains("all 4 receivers used resource"));
     }
 
     @Test

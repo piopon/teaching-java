@@ -20,7 +20,7 @@ class QuickPowerTest extends BaseTestInOut {
 
     @Test
     void executeShouldOutputNumberRaisedToPowerWithNoCompare() {
-        simulateUserInput("3,0 4"+ System.lineSeparator() +"n");
+        simulateUserInput("3.0 4"+ System.lineSeparator() +"n");
         quickPower.execute();
         String output = getOutput();
         assertTrue(output.contains("RESULT: 3.0 ^ 4 = 81.0"));
@@ -28,7 +28,7 @@ class QuickPowerTest extends BaseTestInOut {
 
     @Test
     void executeShouldOutputNumberRaisedToPowerAdTimeWithCompare() {
-        simulateUserInput("3,0 4"+ System.lineSeparator() +"y");
+        simulateUserInput("3.0 4"+ System.lineSeparator() +"y");
         quickPower.execute();
         String output = getOutput();
         assertTrue(output.contains("Math::pow: 3.0 ^ 4 = 81.0 [ time = "));

@@ -2,13 +2,14 @@ package pl.smtc.recursion.power;
 
 import pl.smtc.menu.ConsoleExample;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class QuickPower implements ConsoleExample {
 
     @Override
     public void execute() {
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in).useLocale(Locale.ENGLISH);
         System.out.print("Enter number base: ");
         double number = in.nextDouble();
         System.out.print("Enter exponent: ");

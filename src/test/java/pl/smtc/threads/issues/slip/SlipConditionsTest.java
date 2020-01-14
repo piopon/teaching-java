@@ -17,15 +17,16 @@ class SlipConditionsTest extends BaseTestOut {
     }
 
     @Test
-    void executeShouldIvokeSlippedConditionsExample() {
+    void executeShouldInvokeSlippedConditionsExample() {
         slipConditions.execute();
         String output = getOutput();
-        String notExpectedSequence1[] = {"Thread 1 -> waiting for lock.", "Thread 1 -> lock free.",
-                "Thread 1 -> acquired lock.", "Thread 1 -> working...", "Thread 1 -> released lock."};
-        assertFalse(outputContainsInOrder(output, notExpectedSequence1));
-        String notExpectedSequence2[] = {"Thread 2 -> waiting for lock.", "Thread 2 -> lock free.",
-                "Thread 2 -> acquired lock.", "Thread 2 -> working...", "Thread 2 -> released lock."};
-        assertFalse(outputContainsInOrder(output, notExpectedSequence2));
+        String notExpectedSequence[] = {
+                "Thread 1 -> waiting for lock.", "Thread 1 -> lock free.",
+                "Thread 1 -> acquired lock.", "Thread 1 -> working...",
+                "Thread 1 -> released lock.", "Thread 2 -> waiting for lock.",
+                "Thread 2 -> lock free.", "Thread 2 -> acquired lock.",
+                "Thread 2 -> working...", "Thread 2 -> released lock." };
+        assertFalse(outputContainsInOrder(output, notExpectedSequence));
     }
 
     @Test

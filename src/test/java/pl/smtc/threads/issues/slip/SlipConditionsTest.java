@@ -13,7 +13,7 @@ class SlipConditionsTest extends BaseTestOut {
 
     @Override
     protected void setUp() {
-        slipConditions = new SlipConditions(10);
+        slipConditions = new SlipConditions(100);
     }
 
     @Test

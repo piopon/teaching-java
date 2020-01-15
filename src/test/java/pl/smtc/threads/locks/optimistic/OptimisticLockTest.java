@@ -13,16 +13,18 @@ class OptimisticLockTest extends BaseTestOut {
 
     @Override
     protected void setUp() {
-        optimisticLock = new OptimisticLock(15, 20, 20);
+        optimisticLock = new OptimisticLock(25, 50, 50);
     }
 
     @Test
     void executeShouldInvokeOptimisticLockExample() {
         optimisticLock.execute();
         String output = getOutput();
-        String expectedOutput[] = { "FILLER -> run [start].", "FILLER -> optimistic lock valid? true",
-            "WRITER -> run [start].", "WRITER -> write start", "FILLER -> optimistic lock valid? false" };
-        assertTrue(outputContainsInOrder(output, expectedOutput));
+        assertTrue(output.contains("FILLER -> run [start]."));
+        assertTrue(output.contains("FILLER -> optimistic lock valid? true"));
+        assertTrue(output.contains("WRITER -> run [start]."));
+        assertTrue(output.contains("WRITER -> write start"));
+        assertTrue(output.contains("FILLER -> optimistic lock valid? false"));
         assertTrue(output.contains("WRITER -> run [stop]."));
         assertTrue(output.contains("FILLER -> run [stop]."));
     }
@@ -30,10 +32,5 @@ class OptimisticLockTest extends BaseTestOut {
     @Test
     void getNameShouldReturnOptimisticLockExample() {
         assertEquals("Optimistic lock example", optimisticLock.getName());
-    }
-
-    private boolean outputContainsInOrder(String current, String... expected) {
-        String orderedOutput = Arrays.stream(expected).collect(Collectors.joining(System.lineSeparator()));
-        return current.contains(orderedOutput);
     }
 }

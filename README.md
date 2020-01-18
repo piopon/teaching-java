@@ -11,3 +11,4 @@ Build with Maven.
 Open project in your favourite IDE and run `main()` method from `src/main/java/pl.smtc/Main.java` file.
 An examples menu open and user input will be available.
 
+![Main examples menu](src/main/resources/documentation/readme_menu.png?raw=true "Main examples menu")

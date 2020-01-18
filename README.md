@@ -30,3 +30,6 @@ Currently implemented and available examples are:
 Teaching JAVA examples are made available under the GNU GPL-3.0 License. See the
 [LICENSE](LICENSE)
 file for more information.
+
+---
+Developed with :heartpulse: by PNK @ 2019-2020 :vulcan_salute:

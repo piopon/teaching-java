@@ -12,3 +12,11 @@ Open project in your favourite IDE and run `main()` method from `src/main/java/p
 An examples menu open and user input will be available.
 
 ![Main examples menu](src/main/resources/documentation/readme_menu.png?raw=true "Main examples menu")
+
+#### Contents
+Currently implemented and available examples are:
+* Java basics: control flow, operators and primitive types, etc.
+* Recursion examples: explained by real-life algorithms
+* Concurrency examples: threads creation sync, stop and most common issues
+* Math, search and sort algorithms
+* Design patterns: behavioral, creational and structural

@@ -7,9 +7,14 @@
 Code examples for JAVA tutorials which are used and explained on my web page.
 
 #### Usage
-Build with Maven.
-Open project in your favourite IDE and run `main()` method from `src/main/java/pl.smtc/Main.java` file.
-An examples menu open and user input will be available.
+Powered by Maven framework. Build from command line by typing below commands:
+```text
+mvn clean verify
+mvn compile
+mvn test
+```
+Alternatively open project in your favourite IDE, wait for all dependencies to be downloaded and run `main()` method from `src/main/java/pl.smtc/Main.java` file.
+An examples menu will open with available user input.
 
 ![Main examples menu](src/main/resources/documentation/readme_menu.png?raw=true "Main examples menu")
 

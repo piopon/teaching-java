@@ -20,3 +20,8 @@ Currently implemented and available examples are:
 * Concurrency examples: threads creation sync, stop and most common issues
 * Math, search and sort algorithms
 * Design patterns: behavioral, creational and structural
+
+####License
+Teaching JAVA examples are made available under the GNU GPL-3.0 License. See the
+[LICENSE](LICENSE)
+file for more information.

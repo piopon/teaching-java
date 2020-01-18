@@ -26,6 +26,15 @@ Currently implemented and available examples are:
 * Math, search and sort algorithms
 * Design patterns: behavioral, creational and structural
 
+### Roadmap
+- [ ] lambda expressions
+- [ ] functional library and streams
+- [ ] basics examples development
+- [ ] generic methods and classes
+- [ ] XML integration
+- [ ] database access (H2, Hibernate, etc.)
+- [ ] Docker for Java developers
+
 ###License
 Teaching JAVA examples are made available under the GNU GPL-3.0 License. See the
 [LICENSE](LICENSE)

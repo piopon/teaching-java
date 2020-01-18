@@ -38,7 +38,7 @@ Currently implemented and available examples are:
 - [ ] database access (H2, Hibernate, etc.)
 - [ ] Docker for Java developers
 
-###License
+### License
 
 Teaching JAVA examples are made available under the GNU GPL-3.0 License. See the
 [LICENSE](LICENSE)
